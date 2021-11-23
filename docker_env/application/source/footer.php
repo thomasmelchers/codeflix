@@ -1,7 +1,6 @@
 <link rel="stylesheet" href="./css/footer.css">
 
-<footer>
-    <div class="container-fluid bg-dark">
+<footer class="container-fluid bg-dark">
         <div class="row p-0 mt-3 justify-content-around">
             <div class="col-2 text-center mt-md-2 icons-social">
                 <div>
@@ -59,5 +58,4 @@
                     <p>Codeflix &copy; Aurélien, Marine, Nicolas & Thomas. </p>
                 </div>
             </div>
-    </div>
 </footer>
