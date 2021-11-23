@@ -1,0 +1,31 @@
+p {
+    color:white;
+    font-weight: 500;
+}
+
+.icons-social i {
+	font-size: 3em;
+    color: white;
+}
+
+.icons-social i:hover{
+    color:red;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+#paragrapheRepo{
+    color:red;
+}
+
+.icons-social-repo i {
+	font-size: 3em;
+    color: red;
+}
+
+.icons-social-repo i:hover{
+    color:white;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
