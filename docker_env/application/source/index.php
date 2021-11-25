@@ -17,7 +17,7 @@ $sql = "SELECT * FROM `tutolink`";
 	<title>Codeflix - Accueil</title>
 <body style="background-color: black;">
 	<header>
-		<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+		<div class="navbar">
 				<a class="navbar-brand" style="color: red;" href="#">CODEFLIX</a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
@@ -49,7 +49,7 @@ $sql = "SELECT * FROM `tutolink`";
 						<button class="btn ml-2" type="submit" style="color: red;">Profil</button>
 				</form>
 				</div>
-		</nav>
+</div>
 		</header>
 	
 	<h1 style="color: red;">NodeJs</h1>
