@@ -5,12 +5,60 @@ html {
 body {
   margin: 0;
   background-color: #000;
+  min-width: 1200px;
 }
 
 h1 {
   font-family: Arial;
   color: red;
   text-align: center;
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  background-color: grey;
+  position: relative;
+  overflow-X: hidden;
+}
+.slider {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  transition: .7s ease-in-out;
+  transform: translateX(0);
+}
+.slider-item {
+  position: absolute;
+  height: 150px;
+}
+.slider-btn {
+  top: -110px;
+  position: relative;
+
+}
+.slider-btn a {
+  position: absolute;
+  font-size: 60px;
+  color: #FFF;
+  /* top: 50%;
+  transform: translateY(-50%); */
+  color: red;
+}
+.slider-btn a.arrow-left {
+  left: 30px;
+}
+
+.slider-btn a.arrow-right {
+  right: 30px;
+}
+
+iframe {
+  border: 0;
+  margin: 0;
 }
 
 .wrapper {
@@ -63,3 +111,4 @@ h1 {
     display: none;
   }
 }
+
