@@ -15,7 +15,6 @@ $dsn = "mysql:dbname=".$database.";host=".$host;
 try{
     /* PDO */
     $db = new PDO ($dsn, $user, $pswd);
-    echo "La connexion avec le serveur a été établie ! <'br'>";
     
     /* Tous les échanges de données en UTF8 */
     $db->exec("SET NAMES utf8");

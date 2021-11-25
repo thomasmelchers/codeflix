@@ -17,6 +17,10 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+.navbar {
+  background-color: grey;
+}
 .container {
   width: 1200px;
   margin: 0 auto;
