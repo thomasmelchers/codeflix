@@ -66,7 +66,12 @@ $sql = "SELECT * FROM `tutolink`";
 				<a href="javascript::" class="arrow arrow-right">›</a>
 		</div>
 	</div>
+
+	<!-- FOOTER -->
+
+	<?php include('footer.php'); ?>
 </body>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+
 <?php require_once "script.php";?>
 </html>
