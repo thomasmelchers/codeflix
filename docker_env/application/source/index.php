@@ -1,12 +1,22 @@
 <?php
+session_start();
+if (!isset($_SESSION["utilisateur"])){
+    header("Location: login.php");
+    exit;
+}
+// Connexion à la base de données
 include('server_connection.php');
+// Inclure le header
 include('header.php');
 $sql = "SELECT * FROM `tutolink`";
 		$requete = $db->query($sql);
 ?>
 
-<body>
-<?php include('navbar.php'); ?>
+<?php 
+// Inclure la navbar
+include('navbar.php'); 
+?>
+
 <h1 style="color: red;">NodeJs</h1>
 	<div class="container" id="slider1">
 		<div class="slider">
@@ -27,7 +37,9 @@ $sql = "SELECT * FROM `tutolink`";
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
-<?php require_once "script.php";?>
+<?php 
+// Inclure le footer
+include "footer.php";
+
+require_once "script.php";?>
 	
-</body>
-</html>
