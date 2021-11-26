@@ -3,8 +3,10 @@
 session_start();
 
 // Inclure le header
+include "header.php";
 
 // Inclure la navbar
+include "navbar.php";
 ?>
 
 <h1>Profil de <?= $_SESSION["utilisateur"]["pseudo"] ?></h1>
@@ -14,4 +16,5 @@ session_start();
 
 <?php
 // Inclure le footer
+include "footer.php";
 ?>

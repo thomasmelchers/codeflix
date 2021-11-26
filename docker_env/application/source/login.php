@@ -64,8 +64,9 @@ if (!empty($_POST)) {
 }
 
 // inclure header
-
+include "header.php";
 // inclure navbar
+include "navbar.php";
 ?>
 
 
@@ -98,4 +99,5 @@ if (isset($_SESSION["error"])) {
 
 <?php
 // inclure le footer
+include "footer.php";
 ?>

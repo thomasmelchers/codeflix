@@ -14,4 +14,6 @@
 	<title>Codeflix - Accueil</title>
 	<body style="background-color: black;">
 </head>
+<body>
+
 	
