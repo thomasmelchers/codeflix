@@ -1,5 +1,5 @@
 <?php
-define('BASEPATH', true); //access connection script if you omit this line file will be blank
+/*define('BASEPATH', true); //access connection script if you omit this line file will be blank
 require 'db.php'; //require connection script
 
 if(isset($_POST['submit'])){  
@@ -46,5 +46,5 @@ if(isset($_POST['submit'])){
             echo '<script>alert("invalid username or password")</script>';
         }
     }
-    }
+    }*/
 ?>
