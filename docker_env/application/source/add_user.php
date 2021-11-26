@@ -87,6 +87,12 @@ if (!empty($_POST)) {
         $_SESSION["error"] = ["Le formulaire est incomplet"];
     }
 }
+
+// inclure header
+include "header.php";
+
+// inclure navbar
+include "navbar.php";
 ?>
 
 <h1>Inscription</h1>
@@ -127,3 +133,8 @@ if (isset($_SESSION["error"])) {
     </div>
     <button type="submit">Je m'inscris !</button>
 </form>
+
+<?php
+// Inclure le footer
+include "footer.php";
+?>
