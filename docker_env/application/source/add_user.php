@@ -55,7 +55,7 @@ if (!empty($_POST)) {
             $sql = "INSERT INTO `utilisateurs`(`prenom`, `nom`, `pseudo`, `email`, `password`) VALUES (:prenom, :nom, :pseudo, :email, '$pass')";
 
             // préparer la requête
-            $query = $db->prepare($sql);
+            $query = $conn->prepare($sql);
             // créer des bindValue -> connecter des variables PHP à leur paramètre SQL
             $query->bindValue(":prenom", $_POST["prenom"], PDO::PARAM_STR);
             $query->bindValue(":nom", $_POST["nom"], PDO::PARAM_STR);
@@ -66,7 +66,7 @@ if (!empty($_POST)) {
         }
 
         // Récupérer l'id du nouvel utilisateur
-        $id = $db->lastInsertId();
+        $id = $conn->lastInsertId();
 
 
         // Connecter l'utilisateur 

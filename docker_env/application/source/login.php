@@ -28,7 +28,7 @@ if (!empty($_POST)) {
         // requête SQL
         $sql = "SELECT * FROM `utilisateurs` WHERE `email` = :email";
         // préparer la requête
-        $query = $db->prepare($sql);
+        $query = $conn->prepare($sql);
         $query->bindValue(":email", $_POST["email"], PDO::PARAM_STR);
         //exécuter la requête
         $query->execute();
@@ -51,7 +51,9 @@ if (!empty($_POST)) {
 
         // On stocke dans $_SESSION les informations de l'utilisateur
         $_SESSION["utilisateur"] = [
-            "id" => $user["id"],
+            "id" => $user["user_id"],
+            "prenom" => $user['prenom'],
+            "nom" => $user['nom'],
             "pseudo" => $user["pseudo"],
             "email" => $user["email"],
             //"roles" => $user["roles"]
