@@ -57,4 +57,3 @@ include('navbar.php');
 // Inclure le footer
 include "footer.php";
 ?>
-
