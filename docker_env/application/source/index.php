@@ -6,14 +6,10 @@ if (!isset($_SESSION["utilisateur"])){
 }
 // Connexion à la base de données
 include('server_connection.php');
+
 // Inclure le header
 include('header.php');
 
-?>
-
-
-
-<?php 
 // Inclure la navbar
 include('navbar.php'); 
 ?>
@@ -61,6 +57,4 @@ include('navbar.php');
 // Inclure le footer
 include "footer.php";
 ?>
-
-</html>
 
