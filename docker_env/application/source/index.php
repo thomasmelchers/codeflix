@@ -1,22 +1,45 @@
 <?php
 include('server_connection.php');
 include('header.php');
-$sql = "SELECT * FROM `tutolink`";
-		$requete = $db->query($sql);
+
 ?>
 
 <body>
 <?php include('navbar.php'); ?>
+
 <h1 style="color: red;">NodeJs</h1>
-	<div class="container" id="slider1">
-		<div class="slider">
-		<?php while($row = $requete->fetch(PDO::FETCH_ASSOC)) : ?>
+<div class="container" id="slider1">
+			<div class="slider">
+			<?php
+				$keyword = $_POST['keyword'];
+				$query = $conn->prepare("SELECT * FROM `tutolink`");
+				$query->execute();
+				while($row = $query->fetch()){
+			?>
 			<div class="slider-item">
-				<iframe width="300px" src=<?php echo htmlspecialchars($row['lien']); ?>></iframe>
-			</div>
-		<?php endwhile; ?>
+			<iframe width="300px" src=<?php echo htmlspecialchars($row['lien']); ?>></iframe>
 		</div>
-		<div class="slider-btn">
+		<?php } ?>
+			</div>
+	<div class="slider-btn">
+				<a href="javascript::" class="arrow arrow-left">‹</a>
+				<a href="javascript::" class="arrow arrow-right">›</a>
+		</div>
+	</div>
+	<h1 style="color: red;">NodeJs</h1>
+<div class="container" id="slider2">
+			<div class="slider">
+			<?php
+				$query = $conn->prepare("SELECT * FROM `tutolink`");
+				$query->execute();
+				while($row = $query->fetch()){
+			?>
+			<div class="slider-item">
+			<iframe width="300px" src=<?php echo htmlspecialchars($row['lien']); ?>></iframe>
+		</div>
+		<?php } ?>
+			</div>
+	<div class="slider-btn">
 				<a href="javascript::" class="arrow arrow-left">‹</a>
 				<a href="javascript::" class="arrow arrow-right">›</a>
 		</div>
@@ -29,5 +52,4 @@ $sql = "SELECT * FROM `tutolink`";
 
 <?php require_once "script.php";?>
 	
-</body>
 </html>
