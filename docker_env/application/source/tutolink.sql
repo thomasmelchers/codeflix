@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : database:3306
--- Généré le :  mar. 23 nov. 2021 à 09:53
+-- Généré le :  lun. 29 nov. 2021 à 13:30
 -- Version du serveur :  10.4.2-MariaDB-1:10.4.2+maria~bionic
 -- Version de PHP :  7.2.5
 
@@ -42,12 +42,20 @@ CREATE TABLE `tutolink` (
 --
 
 INSERT INTO `tutolink` (`id`, `titre`, `auteur`, `langage`, `environnement`, `lien`) VALUES
-(1, 'NodeJs (1/6)', 'Grafikart', 'JavaScript', 'Frontend', '<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/0PA69L88HeI\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>'),
-(2, 'NodeJs (2/6)', 'Grafikart', 'JavaScript', 'Frontend', '<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/53U0TBKFwUw\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>'),
-(3, 'NodeJs (3/6)', 'Grafikart', 'JavaScript', 'Frontend', '<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/HLPHoY-h7vc\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>'),
-(4, 'NodeJs (4/6)', 'Grafikart', 'JavaScript', 'Frontend', '<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/iZCYQSq9IQM\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>'),
-(5, 'NodeJs (5/6)', 'Grafikart', 'JavaScript', 'Frontend', '<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/B4P_b-UzjLw\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>'),
-(6, 'NodeJs (6/6)', 'Grafikart', 'JavaScript', 'Frontend', '<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/Q8wacXNngXs\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>');
+(1, 'Apprendre le JS part 1.', 'Primfx', 'JavaScript', 'Frontend', 'https://www.youtube.com/embed/PIU_2SBSZgw'),
+(2, 'NodeJs (2/6)', 'Grafikart', 'JavaScript', 'Frontend', 'https://www.youtube.com/embed/53U0TBKFwUw'),
+(3, 'NodeJs (3/6)', 'Grafikart', 'JavaScript', 'Frontend', 'https://www.youtube.com/embed/HLPHoY-h7vc'),
+(4, 'NodeJs (4/6)', 'Grafikart', 'JavaScript', 'Frontend', 'https://www.youtube.com/embed/iZCYQSq9IQM'),
+(5, 'NodeJs (5/6)', 'Grafikart', 'JavaScript', 'Frontend', 'https://www.youtube.com/embed/B4P_b-UzjLw'),
+(6, 'NodeJs (6/6)', 'Grafikart', 'JavaScript', 'Frontend', 'https://www.youtube.com/embed/Q8wacXNngXs'),
+(7, 'Grafikart', 'Grafikart', 'JavaScript', 'Frontend', 'https://www.youtube.com/embed/JidGRO0cQQ4'),
+(8, 'Grafikart', 'Grafikart', 'Javascript', 'Frontend', 'https://www.youtube.com/embed/JidGRO0cQQ4'),
+(9, 'Grafikart', 'Grafikart', 'JavaScript', 'Frontend', 'https://www.youtube.com/embed/JidGRO0cQQ4'),
+(10, 'Grafikart', 'Grafikart', 'JavaScript', 'Frontend', 'https://www.youtube.com/embed/JidGRO0cQQ4'),
+(11, 'Grafikart', 'Grafikart', 'JavaScript', 'Frontend', 'https://www.youtube.com/embed/JidGRO0cQQ4'),
+(12, 'Grafikart', 'Grafikart', 'JavaScript', 'Frontend', 'https://www.youtube.com/embed/JidGRO0cQQ4'),
+(13, 'Grafikart', 'Grafikart', 'JavaScript', 'Frontend', 'https://www.youtube.com/embed/JidGRO0cQQ4'),
+(14, 'Grafikart', 'Grafikart', 'JavaScript', 'Frontend', 'https://www.youtube.com/embed/JidGRO0cQQ4');
 
 --
 -- Index pour les tables déchargées
@@ -67,7 +75,7 @@ ALTER TABLE `tutolink`
 -- AUTO_INCREMENT pour la table `tutolink`
 --
 ALTER TABLE `tutolink`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

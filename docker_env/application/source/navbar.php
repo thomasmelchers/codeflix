@@ -25,13 +25,32 @@
             </li>
           </ul>
         </div>
-          <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" method="post" placeholder="Search"" aria-label="Search">
-            <button class="btn my-2 my-sm-0" type="submit" style="color: red;">Search</button>
-            <button class="btn ml-2" type="submit" style="color: red;">Profil</button>
-			<button class="btn ml-2" type="submit" style="color: red;">Login</button>
-			<button class="btn ml-2" type="submit" style="color: red;">Logout</button>
-        </form>
+        <div class="col-md-8">
+            <form method="GET
+            " action="search.php">
+				<div class="form-inline">
+					<input type="text" class="form-control" name="keyword" placeholder="Search here..." required="required"/>
+					<button class="btn btn-success" name="search">Search</button>
+				</div>
+			</form>
+      <?php
+	if($_GET['keyword']){ ?>
+	<table class="table table-bordered">
+			<?php
+				$keyword = $_GET['keyword'];
+				$query = $conn->prepare("SELECT * FROM tutolink WHERE auteur = '$keyword'");
+                $query->execute();
+				while($row = $query->fetch()){
+			?>
+			<tr>
+				<td><?php echo $row['lien']?></td>
+            </tr>
+        <?php
+			}
+		?>
+<?php		
+	}
+?>
         </div>
     </nav>
 </header>
