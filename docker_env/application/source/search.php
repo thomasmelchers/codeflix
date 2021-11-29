@@ -15,7 +15,8 @@
 		<h3 class="text-primary">Search Bar Using PDO</h3>
 		<hr style="border-top:1px dotted #ccc;" />
 		<div class="col-md-8">
-            <form method="GET" action="">
+            <form method="GET
+            " action="search.php">
 				<div class="form-inline">
 					<input type="text" class="form-control" name="keyword" placeholder="Search here..." required="required"/>
 					<button class="btn btn-success" name="search">Search</button>
@@ -23,25 +24,24 @@
 			</form>
             
             <?php
-	if(($_GET['keyword'])){
-        
-?>
+	if($_GET['keyword']){ ?>
 	<table class="table table-bordered">
 			<?php
 				$keyword = $_GET['keyword'];
-				$query = $conn->prepare("SELECT * FROM `tutolink`");
+				$query = $conn->prepare("SELECT * FROM tutolink WHERE auteur = '$keyword'");
                 $query->execute();
 				while($row = $query->fetch()){
 			?>
 			<tr>
-				<td><?php echo $row['auteur']?></td>
+				<td><?php echo $row['lien']?></td>
             </tr>
         <?php
-				}
-			?>
-            <?php		
+			}
+		?>
+<?php		
 	}
 ?>
+
 
 
 	

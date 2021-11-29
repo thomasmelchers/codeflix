@@ -14,7 +14,7 @@ $dsn = "mysql:dbname=".$database.";host=".$host;
 
 try{
     /* PDO */
-	$conn = new PDO($dsn, $user, $pswd);;
+	$conn = new PDO($dsn, $user, $pswd);
 	if(!$conn){
 		die("Error: Failed to coonect to database!");
 	}
