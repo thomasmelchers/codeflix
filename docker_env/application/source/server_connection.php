@@ -14,12 +14,15 @@ $dsn = "mysql:dbname=".$database.";host=".$host;
 
 try{
     /* PDO */
-    $db = new PDO ($dsn, $user, $pswd);
-    
-    /* Tous les échanges de données en UTF8 */
-    $db->exec("SET NAMES utf8");
+	$conn = new PDO($dsn, $user, $pswd);;
+	if(!$conn){
+		die("Error: Failed to coonect to database!");
+	}
+
 
 }catch(PDOException $e){
     die($e->getMessage());
 }
+
+
 ?>
