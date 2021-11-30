@@ -111,6 +111,10 @@ label{
     z-index: -1;
     transition : .4s linear;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 331fe796f74ab4f182017e7f90c644be9d05a5c7
 .btn:hover::before{
     width: 15.5vw;
 } */
