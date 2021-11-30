@@ -66,13 +66,13 @@ if (!empty($_POST)) {
 }
 
 // inclure header
-include "header.php";
+/* include "header.php"; */
 // inclure navbar
-include "navbar.php";
+/* include "navbar.php"; */
 ?>
 
 
-<h1>Connexion</h1>
+
 <?php
 // Pour afficher les erreurs 
 if (isset($_SESSION["error"])) {
@@ -86,20 +86,32 @@ if (isset($_SESSION["error"])) {
 }
 ?>
 
-<form method="post">
-    <div>
-        <label for="email">Email</label>
-        <input type="email" name="email" id="email">
-    </div>
-    <div>
-        <label for="password">Mot de passe</label>
-        <input type="password" name="password" id="password">
-    </div>
-    <button type="submit">Me connecter</button>
+<link rel="stylesheet" href="./css/login.css">
 
-</form>
+<div class="popUpForm"> 
+    <div class="contenu">
+        <div class="close">+</div>
+        <h1>Connexion</h1>
+        <div class="formulaire">
+            <form method="post">
+                <div class="elementForm">
+                    <label for="email">Email</label>
+                    <input type="email" placeholder="aaron.swartz@gmail.com" name="email" id="email">
+                </div>
+                <div class="elementForm">
+                    <label for="password">Mot de passe</label>
+                    <input type="password" placeholder="bestcoder" name="password" id="password">
+                </div>
+                <div class="elementForm">
+                    <button class="btn" type="submit">Me connecter</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 
+<script src="./js/login.js"></script>
 <?php
 // inclure le footer
-include "footer.php";
+/* include "footer.php"; */
 ?>
