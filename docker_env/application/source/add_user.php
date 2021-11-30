@@ -89,13 +89,13 @@ if (!empty($_POST)) {
 }
 
 // inclure header
-include "header.php";
+/* include "header.php"; */
 
 // inclure navbar
-include "navbar.php";
+/* include "navbar.php"; */
 ?>
 
-<h1>Inscription</h1>
+
 <?php
 // Pour afficher les erreurs 
 if (isset($_SESSION["error"])) {
@@ -109,32 +109,46 @@ if (isset($_SESSION["error"])) {
 }
 ?>
 
-<!-- Form html -->
-<form method="post">
-    <div>
-        <label for="prenom">Votre prénom</label>
-        <input type="text" name="prenom" id="prenom">
-    </div>
-    <div>
-        <label for="nom">Votre nom</label>
-        <input type="text" name="nom" id="nom">
-    </div>
-    <div>
-        <label for="pseudo">Votre pseudo</label>
-        <input type="text" name="pseudo" id="pseudo">
-    </div>
-    <div>
-        <label for="email">Email</label>
-        <input type="email" name="email" id="email">
-    </div>
-    <div>
-        <label for="password">Mot de passe</label>
-        <input type="password" name="password" id="password">
-    </div>
-    <button type="submit">Je m'inscris !</button>
-</form>
+<link rel="stylesheet" href="./css/addUser.css">
+<!-- <link rel="stylesheet" href="./css/add_user.css"> -->
 
+<!-- Form html -->
+<div class="popUpForm">
+    <div class="contenu">
+        <div class="close">+</div>
+        <h1>Inscription</h1>
+        <div class="formulaire">
+            <form method="post">
+                <div class="elementForm">
+                    <label for="prenom">Votre prénom</label>
+                    <input type="text" name="prenom" placeholder="Aaron" id="prenom">
+                </div>
+                <div class="elementForm">
+                    <label for="nom">Votre nom</label>
+                    <input type="text" name="nom" placeholder="Swartz" id="nom">
+                </div>
+                <div class="elementForm">
+                    <label for="pseudo">Votre pseudo</label>
+                    <input type="text" name="pseudo" placeholder="Swartzy" id="pseudo">
+                </div>
+                <div class="elementForm">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" placeholder="aaron.swartz@gmail.com" id="email">
+                </div>
+                <div class="elementForm">
+                    <label for="password">Mot de passe</label>
+                    <input type="password" name="password" id="password">
+                </div>
+                <div class="elementForm">
+                    <button class="btn" type="submit" name="submit" id="submit">Je m'inscris !</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="./js/add_user.js"></script>
 <?php
 // Inclure le footer
-include "footer.php";
+/* include "footer.php"; */
 ?>

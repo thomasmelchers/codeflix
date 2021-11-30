@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.popUpForm{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* display: none; */
+}
+
+.contenu{
+    width: 40vw;
+    height: 55vh;
+    height: 70vh;
+    position: relative;
+    background-color: #343A40;
+    border: 3px solid red;
+    border-radius: 10px;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.formulaire{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.elementForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 7%;
+}
+
+.close{
+    position: absolute;
+    font-size: 2vw;
+    top: 0;
+    right: 1%;
+    transform: rotate(45deg);
+    cursor: pointer;
+    color: red;
+    font-weight: 400;
+}
+
+h1{
+    text-align: center;
+    color: red;
+    text-transform: uppercase;
+    font-size: 2.5vw;
+    margin-bottom: 3%
+}
+
+input{
+    width: 20vw;
+    height: 4vh;
+    border: 2px solid rgb(255, 0, 0);
+    border-radius: 5px;
+    background-color: #B0C4D9;
+    color: white;
+    font-size: 1vw;
+    padding-left: 2%;
+    margin-top: 3%;
+}
+
+label{
+    align-self: baseline;
+    font-weight: 700;
+    color: #B0C4D9;
+    font-size: 1.3vw;
+    text-transform: uppercase;
+}
+
+.btn{
+    background: none;
+    width: 16vw;
+    height: 5vh;
+    border: 2px solid red;
+    font-size: 1.5vw;
+    font-weight: 600;
+    border-radius: 10px;
+    color: red;
+    transition : .4s linear;
+    position: relative;
+    cursor: pointer;
+    margin-top: 5%;
+}
+
+.btn:hover{
+    color: #B0C4D9;
+}
+
+/* .btn::before{
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 4.7vh;
+    top: 0px;
+    left: 0px;
+    background-color: red;
+    z-index: -1;
+    transition : .4s linear;
+}
+
+.btn:hover::before{
+    width: 15.5vw;
+} */
