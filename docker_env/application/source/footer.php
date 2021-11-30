@@ -1,6 +1,3 @@
-<link rel="stylesheet" href="./css/footer.css">
-
-
 <footer>
     <div class="container-fluid bg-dark sticky-bottom">
         <div class="row p-0 mt-3 justify-content-around">

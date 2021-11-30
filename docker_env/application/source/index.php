@@ -8,79 +8,84 @@ include('server_connection.php');
 include('header.php');
 include('navbar.php');
 ?>
+
 <h1 style="color: red; margin-top:20px;">HTML</h1>
+
 <div class="container" id="slider1">
-			<div class="slider">
-			<?php
-				$keyword = $_POST['keyword'];
-				$query = $conn->prepare("SELECT * FROM `tutolink`");
-				$query->execute();
-				while($row = $query->fetch()){
-			?>
-			<div class="slider-item">
+	<div class="slider">
+		<?php
+			$keyword = $_POST['keyword'];
+			$query = $conn->prepare("SELECT * FROM `tutolink`");
+			$query->execute();
+			while($row = $query->fetch()){
+		?>
+		<div class="slider-item">
 			<iframe width="300px" src=<?php echo htmlspecialchars($row['lien']); ?>></iframe>
 		</div>
 		<?php } ?>
-			</div>
-	<div class="slider-btn">
-				<a href="javascript::" class="arrow arrow-left">‹</a>
-				<a href="javascript::" class="arrow arrow-right">›</a>
-		</div>
 	</div>
-	<h1 style="color: red; margin-top:20px;">CSS</h1>
+	<div class="slider-btn">
+		<a href="javascript::" class="arrow arrow-left">‹</a>
+		<a href="javascript::" class="arrow arrow-right">›</a>
+	</div>
+</div>
+	
+<h1 style="color: red; margin-top:20px;">CSS</h1>
 <div class="container" id="slider2">
-			<div class="slider">
-			<?php
-				$query = $conn->prepare("SELECT * FROM `tutolink`");
-				$query->execute();
-				while($row = $query->fetch()){
-			?>
-			<div class="slider-item">
+	<div class="slider">
+	<?php
+		$query = $conn->prepare("SELECT * FROM `tutolink`");
+		$query->execute();
+		while($row = $query->fetch()){
+	?>
+		<div class="slider-item">
 			<iframe width="300px" src=<?php echo htmlspecialchars($row['lien']); ?>></iframe>
 		</div>
-		<?php } ?>
-			</div>
-	<div class="slider-btn">
-				<a href="javascript::" class="arrow arrow-left">‹</a>
-				<a href="javascript::" class="arrow arrow-right">›</a>
-		</div>
+	<?php } ?>
 	</div>
-	<h1 style="color: red; margin-top:20px;">JavaScript</h1>
+	<div class="slider-btn">
+		<a href="javascript::" class="arrow arrow-left">‹</a>
+		<a href="javascript::" class="arrow arrow-right">›</a>
+	</div>
+</div>
+	
+<h1 style="color: red; margin-top:20px;">JavaScript</h1>
 <div class="container" id="slider3">
-			<div class="slider">
-			<?php
-				$query = $conn->prepare("SELECT * FROM `tutolink`");
-				$query->execute();
-				while($row = $query->fetch()){
-			?>
-			<div class="slider-item">
+	<div class="slider">
+		<?php
+			$query = $conn->prepare("SELECT * FROM `tutolink`");
+			$query->execute();
+			while($row = $query->fetch()){
+		?>
+		<div class="slider-item">
 			<iframe width="300px" src=<?php echo htmlspecialchars($row['lien']); ?>></iframe>
 		</div>
 		<?php } ?>
-			</div>
-	<div class="slider-btn">
-				<a href="javascript::" class="arrow arrow-left">‹</a>
-				<a href="javascript::" class="arrow arrow-right">›</a>
-		</div>
 	</div>
-	<h1 style="color: red; margin-top:20px;">PHP</h1>
+	<div class="slider-btn">
+		<a href="javascript::" class="arrow arrow-left">‹</a>
+		<a href="javascript::" class="arrow arrow-right">›</a>
+	</div>
+</div>
+	
+<h1 style="color: red; margin-top:20px;">PHP</h1>
 <div class="container" id="slider4">
-			<div class="slider">
-			<?php
-				$query = $conn->prepare("SELECT * FROM `tutolink`");
-				$query->execute();
-				while($row = $query->fetch()){
-			?>
-			<div class="slider-item">
+	<div class="slider">
+		<?php
+			$query = $conn->prepare("SELECT * FROM `tutolink`");
+			$query->execute();
+			while($row = $query->fetch()){
+		?>
+		<div class="slider-item">
 			<iframe width="300px" src=<?php echo htmlspecialchars($row['lien'])?>></iframe>
 		</div>
 		<?php } ?>
-			</div>
-	<div class="slider-btn">
-				<a href="javascript::" class="arrow arrow-left">‹</a>
-				<a href="javascript::" class="arrow arrow-right">›</a>
-		</div>
 	</div>
+	<div class="slider-btn">
+		<a href="javascript::" class="arrow arrow-left">‹</a>
+		<a href="javascript::" class="arrow arrow-right">›</a>
+	</div>
+</div>
 
 <?php 
 // Inclure le footer
