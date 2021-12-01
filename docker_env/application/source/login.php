@@ -9,7 +9,7 @@ if (isset($_SESSION["utilisateur"])) {
     header("Location: profil.php");
     exit;
 } */
-$title = "Connexion";
+$title = "Connection";
 
 if (!empty($_POST)) {
     // var_dump($_POST);

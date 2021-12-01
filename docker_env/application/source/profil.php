@@ -1,44 +1,53 @@
 <?php
 // session start au tout début
 session_start();
+$pseudo = $_SESSION["utilisateur"]["pseudo"];
+$title = "profil of " . $pseudo;
 
 // Inclure le header
 include "header.php";
 
 // Inclure la navbar
 include "navbar.php";
+
 ?>
 
-<link rel="stylesheet" href="./css/addUser.css">
+<link rel="stylesheet" href="./css/profil.css">
 <!-- <link rel="stylesheet" href="./css/add_user.css"> -->
 
 <!-- Form html -->
-        <h1>Profil de <?= $_SESSION["utilisateur"]["pseudo"] ?></h1>
-        <div class="formulaire">
+<div id="containerProfil">
+    <div id="styleProfil">   
+        <h1 id="titreProfil">Profil of <?= $_SESSION["utilisateur"]["pseudo"] ?></h1>     
+        <div id="formulaireProfil">
             <form method="post">
-                <div>
-                    <label for="prenom">Prénom</label>
+                <div class="elForm">
+                    <label for="prenom">Firstname</label>
                     <input type="text" name="prenom" id="prenom" placeholder="<?= $_SESSION["utilisateur"]["prenom"] ?>" >
                 </div>
-                <div>
-                    <label for="nom">Nom</label>
+                <div class="elForm">
+                    <label for="nom">Lastname</label>
                     <input type="text" name="nom" id="nom" placeholder="<?= $_SESSION["utilisateur"]["nom"] ?>">
                 </div>
-                <div>
+                <div class="elForm">
                     <label for="pseudo">Pseudo</label>
                     <input type="text" name="pseudo" id="pseudo" placeholder="<?= $_SESSION["utilisateur"]["pseudo"] ?>">
                 </div>
-                <div>
+                <div class="elForm">
                     <label for="email">Email</label>
                     <input type="email" name="email" id="email" placeholder="<?= $_SESSION["utilisateur"]["email"] ?>">
                 </div>
-                <div>
-                    <label for="password">Mot de passe</label>
+                <div class="elForm">
+                    <label for="password">Password</label>
                     <input type="password" name="password" id="password" placeholder="<?= $_SESSION["utilisateur"]["password"] ?>">
                 </div>
-                <button class="btn" type="submit" name="submit" id="submit">Mettre à jour</button>
+                <div id="buttonProfil">
+                    <button class="btn btn-outline my-2 my-sm-0 mx-2"  style="color: red;" type="submit" name="submit" id="submit">Update Profil</button>
+                </div>
             </form>
         </div>
+    </div>
+</div>
 <?php
 // Inclure le footer
 include "footer.php";

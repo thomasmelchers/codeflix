@@ -1,0 +1,42 @@
+#containerProfil{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 6.5%;
+    margin-bottom: 6.5%;
+}
+
+#styleProfil{
+    width: 30%;
+    height: 50%;
+    background-color: #343A40;
+    border: 3px solid red;
+    border-radius: 10px;
+    padding: 2%;
+}
+
+#formulaireProfil{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.elForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 2%;
+}
+
+#titreProfil{
+    text-align: center;
+    color: red;
+    text-transform: uppercase;
+    font-size: 2.5em;
+    margin-top: 8px;
+}
+
+#buttonProfil{
+    text-align: center;
+    margin-top: 4%;
+}

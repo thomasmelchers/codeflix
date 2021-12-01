@@ -5,6 +5,7 @@
 */
 // On démarre la session PHP
 session_start(); 
+$title = "Registration" ;
 // Pour empêcher d'aller sur la page inscription si déjà connecté : 
 /* if (isset($_SESSION["utilisateur"])) {
     header("Location: profil.php");
