@@ -2,7 +2,7 @@
 include('header.php');
 include('navbar.php');
 ?>
-<body style="background-color: black;">
+
 
 
 <h1 style="color: red; margin-top:20px;"> CodeFlix</h1>
@@ -42,4 +42,4 @@ include "footer.php";
 
 
     <?php require_once "script.php";?>  
-</body>
+

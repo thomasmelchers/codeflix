@@ -14,10 +14,10 @@
           Langage
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">HTML</a>
-          <a class="dropdown-item" href="#">CSS</a>
-          <a class="dropdown-item" href="#">JavaScript</a>
-          <a class="dropdown-item" href="#">PHP</a>
+          <a class="dropdown-item" href="search.php?keyword=HTML&search=">HTML</a>
+          <a class="dropdown-item" href="search.php?keyword=CSS&search=">CSS</a>
+          <a class="dropdown-item" href="search.php?keyword=JavaScript&search=">JavaScript</a>
+          <a class="dropdown-item" href="search.php?keyword=PHP&search=">PHP</a>
         </div>
       </li>
     </ul>
