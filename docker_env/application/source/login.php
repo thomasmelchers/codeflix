@@ -9,6 +9,7 @@ if (isset($_SESSION["utilisateur"])) {
     header("Location: profil.php");
     exit;
 } */
+$title = "Connexion";
 
 if (!empty($_POST)) {
     // var_dump($_POST);
@@ -77,13 +78,7 @@ include "header.php";
 // inclure navbar
 include "navbar.php"; 
 ?>
-
-
-
-
-
-<link rel="stylesheet" href="./css/login.css">
-        <h1>Connection</h1>
+  
         <?php
 // Pour afficher les erreurs 
 if (isset($_SESSION["error"])) {
@@ -98,6 +93,11 @@ if (isset($_SESSION["error"])) {
     unset($_SESSION["error"]);
 }
 ?>
+
+
+<div class="containerLogin">
+    <div class="styleLogin">
+        <h1 class="titreLogin">Connection</h1>
         <div class="formulaire">
             <form method="post">
                 <div class="elementForm">
@@ -108,12 +108,13 @@ if (isset($_SESSION["error"])) {
                     <label for="password">Password</label>
                     <input type="password" placeholder="bestcoder" name="password" id="password">
                 </div>
-                <div class="elementForm">
-                    <button class="btn" type="submit">Connection</button>
+                <div class="elementFormButton">
+                    <button class="btn btn-outline my-2 my-sm-0 mx-2" id="buttonLogin" style="color: red;" type="submit">Connection</button>
                 </div>
             </form>
         </div>
-
+    </div>
+</div
 <?php
 // inclure le footer
 include "footer.php"; 

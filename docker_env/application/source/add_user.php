@@ -105,7 +105,7 @@ include "navbar.php";
 
 <!-- Form html -->
 
-        <h1>Registration</h1>
+        
         <?php
 // Pour afficher les erreurs 
 if (isset($_SESSION["error"])) {
@@ -120,7 +120,11 @@ if (isset($_SESSION["error"])) {
     unset($_SESSION["error"]);
 }
 ?>
-        <div class="formulaire">
+        
+<div class="containerUser">
+    <div class="styleUser">
+    <h1 class="titreUser" >Registration</h1>      
+        <div class="formulaireUser">
             <form method="post">
                 <div class="elementForm">
                     <label for="prenom">Firstname</label>
@@ -142,13 +146,13 @@ if (isset($_SESSION["error"])) {
                     <label for="password">Password</label>
                     <input type="password" name="password" id="password">
                 </div>
-                <div class="elementForm">
-                    <button class="buttonUser" type="submit" name="submit" id="submit">Subscription</button>
+                <div class="buttonUser">
+                    <button class="btn btn-outline my-2 my-sm-0 mx-2" style="color: red;" type="submit" name="submit" id="submit">Subscription</button>
                 </div>
             </form>
         </div>
-
-
+    </div>
+</div>
 <?php
 // Inclure le footer
 include "footer.php";
