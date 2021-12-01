@@ -60,7 +60,7 @@ if (!empty($_POST)) {
         ];
 
         // On peut rediriger vers la page de profil
-        header("Location: profil.php");
+        header("Location: index.php");
 
     }
 }

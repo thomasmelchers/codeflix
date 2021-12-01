@@ -75,13 +75,15 @@ if (!empty($_POST)) {
         // On stocke dans $_SESSION les informations de l'utilisateur
         $_SESSION["utilisateur"] = [
             "id" => $id,
+            "prenom" => $prenom,
+            "nom" => $nom,
             "pseudo" => $pseudo,
             "email" => $_POST["email"],
             //"roles" => ["ROLE_USER"]
         ];
 
         // On peut rediriger vers la page de profil
-       header("Location: profil.php");
+       header("Location: index.php");
 
     } else {
         $_SESSION["error"] = ["Le formulaire est incomplet"];
