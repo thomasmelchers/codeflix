@@ -3,7 +3,7 @@
     padding: 0;
 }
 
-.popUpForm{
+.popUpFormLogin{
     width: 100vw;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.7);
@@ -12,7 +12,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* display: none; */
+    display: none;
+    z-index:1;
 }
 
 .contenu{
@@ -27,6 +28,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    z-index: 2;
 }
 
 .formulaire{
@@ -81,7 +83,7 @@ label{
     text-transform: uppercase;
 }
 
-.btn{
+.buttonLogin{
     background: none;
     width: 16vw;
     height: 5vh;
@@ -96,7 +98,7 @@ label{
     margin-top: 5%;
 }
 
-.btn:hover{
+.buttonLogin:hover{
     color: #B0C4D9;
 }
 
@@ -111,10 +113,7 @@ label{
     z-index: -1;
     transition : .4s linear;
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> 331fe796f74ab4f182017e7f90c644be9d05a5c7
 .btn:hover::before{
     width: 15.5vw;
 } */

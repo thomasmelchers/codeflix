@@ -1,7 +1,9 @@
 <?php
 // On démarre la session PHP
+
 session_start();
 /* 
+
 // Pour empêcher d'aller sur la page connexion si déjà connecté : 
 if (isset($_SESSION["utilisateur"])) {
     header("Location: profil.php");
@@ -81,10 +83,10 @@ if (!empty($_POST)) {
 
 
 <link rel="stylesheet" href="./css/login.css">
-<div class="popUpForm">
+<div class="popUpFormLogin">
     <div class="contenu">
         <div class="close">+</div>
-        <h1>Connexion</h1>
+        <h1>Connection</h1>
         <?php
 // Pour afficher les erreurs 
 if (isset($_SESSION["error"])) {
@@ -106,11 +108,11 @@ if (isset($_SESSION["error"])) {
                     <input type="email" placeholder="aaron.swartz@gmail.com" name="email" id="email">
                 </div>
                 <div class="elementForm">
-                    <label for="password">Mot de passe</label>
+                    <label for="password">Password</label>
                     <input type="password" placeholder="bestcoder" name="password" id="password">
                 </div>
                 <div class="elementForm">
-                    <button class="btn" type="submit">Me connecter</button>
+                    <button class="btn" type="submit">Connection</button>
                 </div>
             </form>
         </div>

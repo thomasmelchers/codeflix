@@ -109,10 +109,11 @@ echo '</pre>'; */
                     </button>
                 </h2>
                 <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                    <div class="accordion-body ">
+                    <div class="accordion-body">
                         <?php 
                         foreach($coms as $com) :
                         if($com['video_id'] === $video_id) ?>
+                        <div class="containerAccordion">
                             <div class="commentDiv">
                                 <div class="commentInfo">
                                     <p>Author : <?= $com['prenom'] . " " . $com['nom'] ; ?></p>
@@ -123,6 +124,7 @@ echo '</pre>'; */
                                     <p> <?= $com['comment'] ;?></p>
                                 </div>
                             </div>
+                        </div>
                         <?php endforeach ; ?>
                     </div>
                 </div>
