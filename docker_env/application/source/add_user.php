@@ -4,7 +4,7 @@
 2. Une fois inscrit, rediriger l'utilisateur vers sa page de profil 
 */
 // On démarre la session PHP
-session_start();
+/* session_start(); */
 // Pour empêcher d'aller sur la page inscription si déjà connecté : 
 if (isset($_SESSION["utilisateur"])){
     header("Location: profil.php");
@@ -142,7 +142,7 @@ if (isset($_SESSION["error"])) {
                     <input type="password" name="password" id="password">
                 </div>
                 <div class="elementForm">
-                    <button class="btn" type="submit" name="submit" id="submit">Je m'inscris !</button>
+                    <button class="buttonUser" type="submit" name="submit" id="submit">Je m'inscris !</button>
                 </div>
             </form>
         </div>

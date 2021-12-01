@@ -1,6 +1,6 @@
 <?php
 // On démarre la session PHP
-session_start();
+/* session_start(); */
 // Pour empêcher d'aller sur la page connexion si déjà connecté : 
 if (isset($_SESSION["utilisateur"])){
     header("Location: profil.php");
@@ -88,7 +88,7 @@ if (isset($_SESSION["error"])) {
 
 <link rel="stylesheet" href="./css/login.css">
 
-<div class="popUpForm"> 
+<div class="popUpFormLogin"> 
     <div class="contenu">
         <div class="close">+</div>
         <h1>Connexion</h1>
