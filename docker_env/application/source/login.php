@@ -99,11 +99,11 @@ if (isset($_SESSION["error"])) {
                     <input type="email" placeholder="aaron.swartz@gmail.com" name="email" id="email">
                 </div>
                 <div class="elementForm">
-                    <label for="password">Mot de passe</label>
+                    <label for="password">Password</label>
                     <input type="password" placeholder="bestcoder" name="password" id="password">
                 </div>
                 <div class="elementForm">
-                    <button class="btn" type="submit">Me connecter</button>
+                    <button class="btn" type="submit">Connection</button>
                 </div>
             </form>
         </div>

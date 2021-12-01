@@ -117,20 +117,20 @@ if (isset($_SESSION["error"])) {
 <!-- Form html -->
 <div class="popUpForm">
     <div class="contenu">
-        <div class="close">+</div>
-        <h1>Inscription</h1>
+        <div class="close1">+</div>
+        <h1>Registration</h1>
         <div class="formulaire">
             <form method="post">
                 <div class="elementForm">
-                    <label for="prenom">Votre prénom</label>
+                    <label for="prenom">Firstname</label>
                     <input type="text" name="prenom" placeholder="Aaron" id="prenom">
                 </div>
                 <div class="elementForm">
-                    <label for="nom">Votre nom</label>
+                    <label for="nom">Lastname</label>
                     <input type="text" name="nom" placeholder="Swartz" id="nom">
                 </div>
                 <div class="elementForm">
-                    <label for="pseudo">Votre pseudo</label>
+                    <label for="pseudo">Pseudo</label>
                     <input type="text" name="pseudo" placeholder="Swartzy" id="pseudo">
                 </div>
                 <div class="elementForm">
@@ -138,11 +138,11 @@ if (isset($_SESSION["error"])) {
                     <input type="email" name="email" placeholder="aaron.swartz@gmail.com" id="email">
                 </div>
                 <div class="elementForm">
-                    <label for="password">Mot de passe</label>
+                    <label for="password">Password</label>
                     <input type="password" name="password" id="password">
                 </div>
                 <div class="elementForm">
-                    <button class="buttonUser" type="submit" name="submit" id="submit">Je m'inscris !</button>
+                    <button class="buttonUser" type="submit" name="submit" id="submit">Subscription</button>
                 </div>
             </form>
         </div>
