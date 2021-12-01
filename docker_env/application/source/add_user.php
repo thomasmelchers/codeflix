@@ -4,12 +4,12 @@
 2. Une fois inscrit, rediriger l'utilisateur vers sa page de profil 
 */
 // On démarre la session PHP
-/* session_start(); */
+session_start(); 
 // Pour empêcher d'aller sur la page inscription si déjà connecté : 
-if (isset($_SESSION["utilisateur"])) {
+/* if (isset($_SESSION["utilisateur"])) {
     header("Location: profil.php");
-    exit;
-}
+    exit; 
+}*/
 
 // on verifie si le formulaire a été envoyé
 if (!empty($_POST)) {
@@ -91,10 +91,10 @@ if (!empty($_POST)) {
 }
 
 // inclure header
-//include "header.php";
+include "header.php";
 
 // inclure navbar
-/* include "navbar.php"; */
+include "navbar.php";
 ?>
 
 
@@ -104,10 +104,7 @@ if (!empty($_POST)) {
 <!-- <link rel="stylesheet" href="./css/add_user.css"> -->
 
 <!-- Form html -->
-<div class="popUpForm">
-    <div class="contenu">
 
-        <div class="close1">+</div>
         <h1>Registration</h1>
         <?php
 // Pour afficher les erreurs 
@@ -150,11 +147,9 @@ if (isset($_SESSION["error"])) {
                 </div>
             </form>
         </div>
-    </div>
-</div>
 
-<script src="./js/add_user.js"></script>
+
 <?php
 // Inclure le footer
-/* include "footer.php"; */
+include "footer.php";
 ?>

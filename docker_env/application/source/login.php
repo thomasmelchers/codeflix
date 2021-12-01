@@ -73,9 +73,9 @@ if (!empty($_POST)) {
 } 
 
 // inclure header
-//include "header.php";
+include "header.php";
 // inclure navbar
-/* include "navbar.php"; */
+include "navbar.php"; 
 ?>
 
 
@@ -83,9 +83,6 @@ if (!empty($_POST)) {
 
 
 <link rel="stylesheet" href="./css/login.css">
-<div class="popUpFormLogin">
-    <div class="contenu">
-        <div class="close">+</div>
         <h1>Connection</h1>
         <?php
 // Pour afficher les erreurs 
@@ -116,11 +113,8 @@ if (isset($_SESSION["error"])) {
                 </div>
             </form>
         </div>
-    </div>
-</div>
 
-<script src="./js/login.js"></script>
 <?php
 // inclure le footer
-/* include "footer.php"; */
+include "footer.php"; 
 ?>
