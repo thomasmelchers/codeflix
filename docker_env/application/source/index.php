@@ -15,7 +15,7 @@ include('navbar.php');
 	<div class="slider">
 		<?php
 			$keyword = $_POST['keyword'];
-			$query = $conn->prepare("SELECT * FROM `tutolink`");
+			$query = $conn->prepare("SELECT * FROM `tutolink` WHERE langage = 'HTML'");
 			$query->execute();
 			while($row = $query->fetch()){
 		?>
@@ -34,7 +34,7 @@ include('navbar.php');
 <div class="container" id="slider2">
 	<div class="slider">
 	<?php
-		$query = $conn->prepare("SELECT * FROM `tutolink`");
+		$query = $conn->prepare("SELECT * FROM `tutolink` WHERE langage = 'CSS'");
 		$query->execute();
 		while($row = $query->fetch()){
 	?>
@@ -53,7 +53,7 @@ include('navbar.php');
 <div class="container" id="slider3">
 	<div class="slider">
 		<?php
-			$query = $conn->prepare("SELECT * FROM `tutolink`");
+			$query = $conn->prepare("SELECT * FROM `tutolink` WHERE langage = 'JavaScript'");
 			$query->execute();
 			while($row = $query->fetch()){
 		?>
@@ -72,7 +72,7 @@ include('navbar.php');
 <div class="container" id="slider4">
 	<div class="slider">
 		<?php
-			$query = $conn->prepare("SELECT * FROM `tutolink`");
+			$query = $conn->prepare("SELECT * FROM `tutolink` WHERE langage = 'PHP'");
 			$query->execute();
 			while($row = $query->fetch()){
 		?>
