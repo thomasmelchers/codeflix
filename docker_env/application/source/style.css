@@ -31,7 +31,7 @@ a {
 .slider {
   position: relative;
   width: 100%;
-  height: 150px;
+  height: 300px;
   transition: .7s ease-in-out;
   transform: translateX(0);
 }
@@ -40,7 +40,7 @@ a {
   height: 150px;
 }
 .slider-btn {
-  top: -110px;
+  top: -200px;
   position: relative;
 
 }
@@ -66,3 +66,10 @@ iframe {
   margin: 0;
 }
 
+.styleCard{
+  background-color: #343A40;
+}
+
+/* .card-title{
+  text-align: center;
+} */

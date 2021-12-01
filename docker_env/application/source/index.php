@@ -21,13 +21,25 @@ include('navbar.php');
 			while($row = $query->fetch()){
 		?>
 		<div class="slider-item">
-			<iframe width="300px" src=<?php echo htmlspecialchars($row['lien']); ?>></iframe>
+			<div class="card styleCard" style="width: 18rem;">
+				<iframe class="video" width="280px" src=<?php echo htmlspecialchars($row['lien']); ?>></iframe>
+  				<div class="card-body text-center">
+					<h5 class="card-title" style="color: darkgoldenrod;"><?php echo htmlspecialchars($row['titre']); ?></h5>
+					<p class="card-text"><?php echo htmlspecialchars($row['auteur']); ?></p>
+					<?php /* $vid = $row['video_id'] . "<br>"; 
+					$_SESSION['video'] = ["vid" => $vid ]; 
+					echo "<pre>" . "<br>";
+					echo var_dump($_SESSION);
+					echo "</pre>" . "<br>"; */  ?>
+					<a href="comments.php" class="btn btn-danger">Lets learn some <?php echo htmlspecialchars($row['langage']); ?></a>
+  				</div>
+			</div>
 		</div>
 		<?php } ?>
 	</div>
 	<div class="slider-btn">
-		<a href="javascript::" class="arrow arrow-left">‹</a>
-		<a href="javascript::" class="arrow arrow-right">›</a>
+		<a href="javascript::" class="arrow arrow-left" style="color: darkred;">‹</a>
+		<a href="javascript::" class="arrow arrow-right" style="color: darkred;">›</a>
 	</div>
 </div>
 	
@@ -40,13 +52,25 @@ include('navbar.php');
 		while($row = $query->fetch()){
 	?>
 		<div class="slider-item">
-			<iframe width="300px" src=<?php echo htmlspecialchars($row['lien']); ?>></iframe>
+			<div class="card styleCard" style="width: 18rem;">
+				<iframe class="video" width="280px" src=<?php echo htmlspecialchars($row['lien']); ?>></iframe>
+  				<div class="card-body text-center">
+					<h5 class="card-title" style="color: darkgoldenrod;"><?php echo htmlspecialchars($row['titre']); ?></h5>
+					<p class="card-text"><?php echo htmlspecialchars($row['auteur']); ?></p>
+					<?php /* $vid = $row['video_id'] . "<br>"; 
+					$_SESSION['video'] = ["vid" => $vid ]; 
+					echo "<pre>" . "<br>";
+					echo var_dump($_SESSION);
+					echo "</pre>" . "<br>"; */  ?>
+					<a href="comments.php" class="btn btn-danger">Lets learn some <?php echo htmlspecialchars($row['langage']); ?></a>
+  				</div>
+			</div>
 		</div>
 	<?php } ?>
 	</div>
 	<div class="slider-btn">
-		<a href="javascript::" class="arrow arrow-left">‹</a>
-		<a href="javascript::" class="arrow arrow-right">›</a>
+		<a href="javascript::" class="arrow arrow-left" style="color: darkred;">‹</a>
+		<a href="javascript::" class="arrow arrow-right" style="color: darkred;">›</a>
 	</div>
 </div>
 	
@@ -59,13 +83,25 @@ include('navbar.php');
 			while($row = $query->fetch()){
 		?>
 		<div class="slider-item">
-			<iframe width="300px" src=<?php echo htmlspecialchars($row['lien']); ?>></iframe>
+			<div class="card styleCard" style="width: 18rem;">
+				<iframe class="video" width="280px" src=<?php echo htmlspecialchars($row['lien']); ?>></iframe>
+  				<div class="card-body text-center">
+					<h5 class="card-title" style="color: darkgoldenrod;"><?php echo htmlspecialchars($row['titre']); ?></h5>
+					<p class="card-text"><?php echo htmlspecialchars($row['auteur']); ?></p>
+					<?php /* $vid = $row['video_id'] . "<br>"; 
+					$_SESSION['video'] = ["vid" => $vid ]; 
+					echo "<pre>" . "<br>";
+					echo var_dump($_SESSION);
+					echo "</pre>" . "<br>"; */  ?>
+					<a href="comments.php" class="btn btn-danger">Lets learn some <?php echo htmlspecialchars($row['langage']); ?></a>
+  				</div>
+			</div>
 		</div>
 		<?php } ?>
 	</div>
 	<div class="slider-btn">
-		<a href="javascript::" class="arrow arrow-left">‹</a>
-		<a href="javascript::" class="arrow arrow-right">›</a>
+		<a href="javascript::" class="arrow arrow-left" style="color: darkred;">‹</a>
+		<a href="javascript::" class="arrow arrow-right" style="color: darkred;">›</a>
 	</div>
 </div>
 	
@@ -78,13 +114,25 @@ include('navbar.php');
 			while($row = $query->fetch()){
 		?>
 		<div class="slider-item">
-			<iframe width="300px" src=<?php echo htmlspecialchars($row['lien'])?>></iframe>
+			<div class="card styleCard" style="width: 18rem;">
+				<iframe class="video" width="280px" src=<?php echo htmlspecialchars($row['lien']); ?>></iframe>
+  				<div class="card-body text-center">
+					<h5 class="card-title" style="color: darkgoldenrod;"><?php echo htmlspecialchars($row['titre']); ?></h5>
+					<p class="card-text"><?php echo htmlspecialchars($row['auteur']); ?></p>
+					<?php /* $vid = $row['video_id'] . "<br>"; 
+					$_SESSION['video'] = ["vid" => $vid ]; 
+					echo "<pre>" . "<br>";
+					echo var_dump($_SESSION);
+					echo "</pre>" . "<br>"; */  ?>
+					<a href="comments.php" class="btn btn-danger">Lets learn some <?php echo htmlspecialchars($row['langage']); ?></a>
+  				</div>
+			</div>
 		</div>
 		<?php } ?>
 	</div>
 	<div class="slider-btn">
-		<a href="javascript::" class="arrow arrow-left">‹</a>
-		<a href="javascript::" class="arrow arrow-right">›</a>
+		<a href="javascript::" class="arrow arrow-left" style="color: darkred;">‹</a>
+		<a href="javascript::" class="arrow arrow-right" style="color: darkred;">›</a>
 	</div>
 </div>
 

@@ -1,14 +1,14 @@
 <?php
 session_start();
-var_dump($_SESSION);
+/* var_dump($_SESSION); */
 $user_session = session_id();
-echo '<pre>' ;
+/* echo '<pre>' ;
 var_dump($_SESSION);
-echo '</pre>' ;
+echo '</pre>' ; */
 $user_id = $_SESSION['utilisateur']['user_id'];
 /* $user_firstname = $_SESSION['utilisateur']['prenom'];
 $user_name = $_SESSION['utilisateur']['nom']; */
-echo $user_id . '<br>';
+/* echo $user_id . '<br>'; */
 /* echo $user_firstname;
 echo $user_name . '<br>'; */
 
@@ -20,7 +20,8 @@ include_once('server_connection.php');
     $query = $conn->query($videos);
     $video = $query->fetchAll();
 
-    $id = 1;
+    $tuto;
+    $id = $tuto;
     $n = $id - 1 ;
 
     $video_id = $video[$n]['video_id'];
@@ -68,11 +69,13 @@ echo '</pre>'; */
 <!-- CSS -->
 <link rel="stylesheet" href="./css/comment.css">
 
-        
+<?php /* include('header.php'); 
+include('navbar.php') */?>
+
 
 <div class="row justify-content-center bm" >
     <div class="col-12 col-md-10 col-lg-8 modal-content">
-        <div class="close">+</div>
+        <div class="close2">+</div>
         <h2><?= $video[$n]['titre']?></h2>
         <div id="tutoContainer">
             <iframe width="560" height="315" src="<?= $video[$n]['lien']?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -85,7 +88,7 @@ echo '</pre>'; */
                             LEAVE US A COMMENT: 
                         </button>
                     </h2>
-                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                     <div class="accordion-body justify-content-center">
                         <form action="" method="POST">
                             <!-- <label for="user">username</label>
@@ -133,7 +136,7 @@ echo '</pre>'; */
     </div>
 </div>
 
-
+<?php /* include('footer.php');  */?>
 <!-- script bundle for bootstrap -->
 <script src="./js/comment.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
