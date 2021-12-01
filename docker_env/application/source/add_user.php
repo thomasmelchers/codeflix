@@ -6,7 +6,7 @@
 // On démarre la session PHP
 /* session_start(); */
 // Pour empêcher d'aller sur la page inscription si déjà connecté : 
-if (isset($_SESSION["utilisateur"])){
+if (isset($_SESSION["utilisateur"])) {
     header("Location: profil.php");
     exit;
 }
@@ -63,53 +63,42 @@ if (!empty($_POST)) {
             $query->bindValue(":email", $_POST["email"], PDO::PARAM_STR);
 
             $query->execute();
+
+
+            // Récupérer l'id du nouvel utilisateur
+            $id = $conn->lastInsertId();
+
+
+            // Connecter l'utilisateur 
+
+
+            // On stocke dans $_SESSION les informations de l'utilisateur
+            $_SESSION["utilisateur"] = [
+                "id" => $id,
+                "prenom" => $prenom,
+                "nom" => $nom,
+                "pseudo" => $pseudo,
+                "email" => $_POST["email"],
+                //"roles" => ["ROLE_USER"]
+            ];
+
+            // On peut rediriger vers la page de profil
+            header("Location: index.php");
         }
-
-        // Récupérer l'id du nouvel utilisateur
-        $id = $conn->lastInsertId();
-
-
-        // Connecter l'utilisateur 
-        
-
-        // On stocke dans $_SESSION les informations de l'utilisateur
-        $_SESSION["utilisateur"] = [
-            "id" => $id,
-            "prenom" => $prenom,
-            "nom" => $nom,
-            "pseudo" => $pseudo,
-            "email" => $_POST["email"],
-            //"roles" => ["ROLE_USER"]
-        ];
-
-        // On peut rediriger vers la page de profil
-       header("Location: index.php");
-
     } else {
         $_SESSION["error"] = ["Le formulaire est incomplet"];
     }
 }
 
 // inclure header
-/* include "header.php"; */
+//include "header.php";
 
 // inclure navbar
 /* include "navbar.php"; */
 ?>
 
 
-<?php
-// Pour afficher les erreurs 
-if (isset($_SESSION["error"])) {
-    foreach ($_SESSION["error"] as $message) {
-        ?>
-    <p><?= $message ?></p>
-        <?php
-    }
-    // Une fois qu'une erreur a été affichée, il faut l'effacer
-    unset($_SESSION["error"]);
-}
-?>
+
 
 <link rel="stylesheet" href="./css/addUser.css">
 <!-- <link rel="stylesheet" href="./css/add_user.css"> -->
@@ -117,8 +106,23 @@ if (isset($_SESSION["error"])) {
 <!-- Form html -->
 <div class="popUpForm">
     <div class="contenu">
+
         <div class="close1">+</div>
         <h1>Registration</h1>
+        <?php
+// Pour afficher les erreurs 
+if (isset($_SESSION["error"])) {
+    foreach ($_SESSION["error"] as $message) {
+?>
+<div class="alert alert-danger">
+    <?= $message ?>
+</div>
+<?php
+    }
+    // Une fois qu'une erreur a été affichée, il faut l'effacer
+    unset($_SESSION["error"]);
+}
+?>
         <div class="formulaire">
             <form method="post">
                 <div class="elementForm">
