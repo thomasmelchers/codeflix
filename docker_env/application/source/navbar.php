@@ -26,16 +26,16 @@
 					    <input type="text" class="form-control mx-2" name="keyword" placeholder="Search here..." required="required"/>
 					    <button class="btn btn" name="search" style="color:red;">Search</button>
               <?php if (!isset($_SESSION["utilisateur"])): ?> 
-              <button class="btn btn-outline my-2 my-sm-0 mx-2 login" style="color: red;">  Login </button>
-              <button class="btn btn-outline my-2 my-sm-0 addUser" style="color: red;"> Register </button>
+              <button class="btn btn-outline my-2 my-sm-0 mx-2 login" style="color: red;" ><a href="login.php">  Login</a> </button>
+              <button class="btn btn-outline my-2 my-sm-0 addUser" style="color: red;" ><a href="add_user.php"> Register </a></button>
               <?php else: ?>
               <button class="btn btn-outline my-2 my-sm-0 mx-2" type="submit" style="color: red;"> <a href="user_log_out.php"> Logout</a></button>
               <button class="btn btn-outline my-2 my-sm-0 mx-2" type="submit" style="color: red;"> <a href="profil.php"> Profil</a></button>
               <?php endif; ?>
 				    </div>
 		</form>
-    <?php include"login.php" ; ?>
-    <?php include"add_user.php" ; ?>
+    <?php //include"login.php" ; ?>
+    <?php //include"add_user.php" ; ?> 
 </div>
 </nav>
 
