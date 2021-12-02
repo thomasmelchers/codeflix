@@ -21,6 +21,7 @@ a {
 }
 
 
+
 .container {
   width: 1200px;
   margin-bottom: 20px;
@@ -31,7 +32,7 @@ a {
 .slider {
   position: relative;
   width: 100%;
-  height: 300px;
+  height: 450px;
   transition: .7s ease-in-out;
   transform: translateX(0);
 }
@@ -42,7 +43,6 @@ a {
 .slider-btn {
   top: -200px;
   position: relative;
-
 }
 .slider-btn a {
   position: absolute;
@@ -62,10 +62,14 @@ a {
 }
 
 iframe {
-  border: 0;
-  margin: 0;
+  border: 50px;
+  margin: 30px;
 }
 
 .styleCard{
   background-color: #343A40;
 }
+
+
+
+
