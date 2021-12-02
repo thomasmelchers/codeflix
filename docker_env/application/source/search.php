@@ -3,46 +3,42 @@ include ('server_connection.php');
 include('header.php');
 include('navbar.php');
 ?>
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 38a08a19b714f8e8ab192e76d876fbf0b69818eb
 <?php
-	if($_GET['keyword']){ ?>
-		<table class="table table-bordered">
-			<?php
-				$keyword = $_GET['keyword'];
-				$query = $conn->prepare("SELECT * FROM tutolink WHERE auteur = '$keyword' OR langage = '$keyword'");
-                $query->execute();
-				?>
-				<h1><?= $keyword ?></h1>
+    if($_GET['keyword']){ ?>
 				<?php
-				while($row = $query->fetch()){
-			?>
-<<<<<<< HEAD
-			<tr>
-				<iframe width="300px" src=<?php echo htmlspecialchars($row['lien']); ?>></iframe>
-			</tr>
-        
-		<?php
-=======
-			<tr style="text-align:center;">
-			
-			<iframe width="300px" src=<?php echo htmlspecialchars($row['lien']); ?>></iframe>
-				</tr>
-        <?php
->>>>>>> 38a08a19b714f8e8ab192e76d876fbf0b69818eb
-			}
-		?>
-<?php		
-	}
+					$keyword = $_GET['keyword'];
+					$query = $conn->prepare("SELECT * FROM tutolink WHERE auteur = '$keyword' OR langage = '$keyword' OR titre = '$keyword'");
+					$query->execute();
+					?>
+					
+		<div class="row container-fluid">
+			<div class="col-12 md-10 lg-8 justify-content-center">	
+				<div class="row">
+					<div class="col-10 md-8 lg-8 justify-content-center">
+						<h1><?= $keyword ?></h1>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-10 md-8 lg-8 d-flex flex-wrap justify-content-center"> 
+						<?php
+						while($row = $query->fetch()){
+						?> 
+						<div class="card styleCard m-2" style="width: 18rem;">
+							<div class="su-youtube su-responsive-media-yes p-1 pt-1"><iframe class="video" width="277px" src=<?php echo htmlspecialchars($row['lien']); ?>></iframe></div>
+							<div class="card-body text-center">
+								<h5 class="card-title" style="color: darkgoldenrod;"><?php echo htmlspecialchars($row['titre']); ?></h5>
+								<p class="card-text"><?php echo htmlspecialchars($row['auteur']); ?></p>
+								<a href="comments.php" class="btn btn-danger">Let's learn some <?php echo htmlspecialchars($row['langage']); ?></a>
+							</div>
+						</div>
+						<?php }?>
+					</div>
+				</div>
+			</div>
+		</div>
+<?php        
+    }
 ?>
 <?php 
-	include('footer.php'); 
+    include('footer.php'); 
 ?>
-
-
-
-
-	

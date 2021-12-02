@@ -19,10 +19,11 @@ include('navbar.php');
 			$query = $conn->prepare("SELECT * FROM `tutolink` WHERE langage = 'HTML'");
 			$query->execute();
 			while($row = $query->fetch()){
+
 		?>
 		<div class="slider-item">
 			<div class="card styleCard" style="width: 18rem;">
-				<iframe class="video" width="280px" src=<?php echo htmlspecialchars($row['lien']); ?>></iframe>
+				<div class="su-youtube su-responsive-media-yes p-1 pt-1"><iframe class="video" width="277px" src=<?php echo htmlspecialchars($row['lien']); ?>></iframe></div>
   				<div class="card-body text-center">
 					<h5 class="card-title" style="color: darkgoldenrod;"><?php echo htmlspecialchars($row['titre']); ?></h5>
 					<p class="card-text"><?php echo htmlspecialchars($row['auteur']); ?></p>
@@ -31,7 +32,7 @@ include('navbar.php');
 					echo "<pre>" . "<br>";
 					echo var_dump($_SESSION);
 					echo "</pre>" . "<br>"; */  ?>
-					<a href="comments.php" class="btn btn-danger">Lets learn some <?php echo htmlspecialchars($row['langage']); ?></a>
+					<a href="comments.php" class="btn btn-danger">Let's learn some <?php echo htmlspecialchars($row['langage']); ?></a>
   				</div>
 			</div>
 		</div>
@@ -53,7 +54,7 @@ include('navbar.php');
 	?>
 		<div class="slider-item">
 			<div class="card styleCard" style="width: 18rem;">
-				<iframe class="video" width="280px" src=<?php echo htmlspecialchars($row['lien']); ?>></iframe>
+			<div class="su-youtube su-responsive-media-yes p-1 pt-1"><iframe class="video" width="277px" src=<?php echo htmlspecialchars($row['lien']); ?>></iframe></div>
   				<div class="card-body text-center">
 					<h5 class="card-title" style="color: darkgoldenrod;"><?php echo htmlspecialchars($row['titre']); ?></h5>
 					<p class="card-text"><?php echo htmlspecialchars($row['auteur']); ?></p>
@@ -62,7 +63,7 @@ include('navbar.php');
 					echo "<pre>" . "<br>";
 					echo var_dump($_SESSION);
 					echo "</pre>" . "<br>"; */  ?>
-					<a href="comments.php" class="btn btn-danger">Lets learn some <?php echo htmlspecialchars($row['langage']); ?></a>
+					<a href="comments.php" class="btn btn-danger">Let's learn some <?php echo htmlspecialchars($row['langage']); ?></a>
   				</div>
 			</div>
 		</div>
@@ -84,7 +85,7 @@ include('navbar.php');
 		?>
 		<div class="slider-item">
 			<div class="card styleCard" style="width: 18rem;">
-				<iframe class="video" width="280px" src=<?php echo htmlspecialchars($row['lien']); ?>></iframe>
+			<div class="su-youtube su-responsive-media-yes p-1 pt-1"><iframe class="video" width="277px" src=<?php echo htmlspecialchars($row['lien']); ?>></iframe></div>
   				<div class="card-body text-center">
 					<h5 class="card-title" style="color: darkgoldenrod;"><?php echo htmlspecialchars($row['titre']); ?></h5>
 					<p class="card-text"><?php echo htmlspecialchars($row['auteur']); ?></p>
@@ -93,7 +94,7 @@ include('navbar.php');
 					echo "<pre>" . "<br>";
 					echo var_dump($_SESSION);
 					echo "</pre>" . "<br>"; */  ?>
-					<a href="comments.php" class="btn btn-danger">Lets learn some <?php echo htmlspecialchars($row['langage']); ?></a>
+					<a href="comments.php" class="btn btn-danger">Let's learn some <?php echo htmlspecialchars($row['langage']); ?></a>
   				</div>
 			</div>
 		</div>
@@ -115,7 +116,7 @@ include('navbar.php');
 		?>
 		<div class="slider-item">
 			<div class="card styleCard" style="width: 18rem;">
-				<iframe class="video" width="280px" src=<?php echo htmlspecialchars($row['lien']); ?>></iframe>
+			<div class="su-youtube su-responsive-media-yes p-1 pt-1"><iframe class="video" width="277px" src=<?php echo htmlspecialchars($row['lien']); ?>></iframe></div>
   				<div class="card-body text-center">
 					<h5 class="card-title" style="color: darkgoldenrod;"><?php echo htmlspecialchars($row['titre']); ?></h5>
 					<p class="card-text"><?php echo htmlspecialchars($row['auteur']); ?></p>
@@ -124,7 +125,7 @@ include('navbar.php');
 					echo "<pre>" . "<br>";
 					echo var_dump($_SESSION);
 					echo "</pre>" . "<br>"; */  ?>
-					<a href="comments.php" class="btn btn-danger">Lets learn some <?php echo htmlspecialchars($row['langage']); ?></a>
+					<a href="comments.php" class="btn btn-danger">Let's learn some <?php echo htmlspecialchars($row['langage']); ?></a>
   				</div>
 			</div>
 		</div>

@@ -31,7 +31,7 @@ a {
 .slider {
   position: relative;
   width: 100%;
-  height: 300px;
+  height: 310px;
   transition: .7s ease-in-out;
   transform: translateX(0);
 }
@@ -68,4 +68,14 @@ iframe {
 
 .styleCard{
   background-color: #343A40;
+  text-align: center;
+}
+
+.su-youtube {
+  margin: 0 auto;
+  display: block;
+}
+
+#displayResearch{
+  border: 1px solid yellow;
 }
