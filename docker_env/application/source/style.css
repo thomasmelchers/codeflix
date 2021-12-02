@@ -21,6 +21,7 @@ a {
 }
 
 
+
 .container {
   width: 1200px;
   margin-bottom: 20px;
@@ -42,7 +43,6 @@ a {
 .slider-btn {
   top: -260px;
   position: relative;
-
 }
 .slider-btn a {
   position: absolute;
@@ -62,8 +62,8 @@ a {
 }
 
 iframe {
-  border: 0;
-  margin: 0;
+  border: 50px;
+  margin: 30px;
 }
 
 .styleCard{
