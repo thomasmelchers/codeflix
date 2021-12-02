@@ -17,12 +17,12 @@ include('navbar.php');
 					
 		<div class="row container-fluid">
 			<div class="col-12 md-10 lg-8 justify-content-center">	
-				<div class="row">
+				<div class="row justify-content-center">
 					<div class="col-10 md-8 lg-8 justify-content-center">
 						<h1><?= $keyword ?></h1>
 					</div>
 				</div>
-				<div class="row">
+				<div class="row justify-content-center">
 					<div class="col-10 md-8 lg-8 d-flex flex-wrap justify-content-center"> 
 						<?php
 						while($row = $query->fetch()){
