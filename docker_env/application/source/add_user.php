@@ -107,12 +107,16 @@ include "navbar.php";
 <!-- Form html -->
 
         
-        <?php
+<div class="containerUser">
+    <div class="styleUser">
+    <h1 class="titreUser" >Registration</h1>      
+
+    <?php
 // Pour afficher les erreurs 
 if (isset($_SESSION["error"])) {
     foreach ($_SESSION["error"] as $message) {
 ?>
-<div class="alert alert-danger">
+<div class="alert alert-danger text-center">
     <?= $message ?>
 </div>
 <?php
@@ -121,10 +125,7 @@ if (isset($_SESSION["error"])) {
     unset($_SESSION["error"]);
 }
 ?>
-        
-<div class="containerUser">
-    <div class="styleUser">
-    <h1 class="titreUser" >Registration</h1>      
+
         <div class="formulaireUser">
             <form method="post">
                 <div class="elementForm">

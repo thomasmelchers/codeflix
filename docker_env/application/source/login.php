@@ -79,25 +79,28 @@ include "header.php";
 include "navbar.php"; 
 ?>
   
-        <?php
-// Pour afficher les erreurs 
-if (isset($_SESSION["error"])) {
-    foreach ($_SESSION["error"] as $message) {
-?>
-<div class="alert alert-danger">
-    <?= $message ?>
-</div>
-<?php
-    }
-    // Une fois qu'une erreur a été affichée, il faut l'effacer
-    unset($_SESSION["error"]);
-}
-?>
+
 
 
 <div class="containerLogin">
     <div class="styleLogin">
         <h1 class="titreLogin">Connection</h1>
+
+                <?php
+        // Pour afficher les erreurs 
+        if (isset($_SESSION["error"])) {
+            foreach ($_SESSION["error"] as $message) {
+        ?>
+        <div class="alert alert-danger text-center">
+            <?= $message ?>
+        </div>
+        <?php
+            }
+            // Une fois qu'une erreur a été affichée, il faut l'effacer
+            unset($_SESSION["error"]);
+        }
+        ?>
+
         <div class="formulaire">
             <form method="post">
                 <div class="elementForm">
