@@ -32,7 +32,7 @@ a {
 .slider {
   position: relative;
   width: 100%;
-  height: 450px;
+  height: 350px;
   transition: .7s ease-in-out;
   transform: translateX(0);
 }
@@ -41,7 +41,7 @@ a {
   height: 150px;
 }
 .slider-btn {
-  top: -370px;
+  top: -260px;
   position: relative;
 }
 .slider-btn a {
