@@ -1,5 +1,9 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-dark">
-  <a class="navbar-brand" style="color: red;" href="index.php">CodeFlix</a>
+<?php if (!isset($_SESSION["utilisateur"])) :?>
+  <a class="navbar-brand" style="color: red;" href="index.php">
+    <?php else :?>
+  <a class="navbar-brand" style="color: red;" href="home.php">
+       <?php endif;?> CodeFlix</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
