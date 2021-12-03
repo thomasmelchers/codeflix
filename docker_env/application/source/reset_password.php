@@ -62,18 +62,25 @@ if(isset($_POST['reset'])){
   <body>
 
 <div class="container mt-5 mb-5" style="margin: 0 auto; width: 60%;">
-
+  
     <!-- Error Notification -->
     <?php if(isset($error)){echo '<p class="alert-danger rounded p-3">'.$error.'</p>';}?>
     <?php if(isset($expired)){echo '<p class="alert-danger rounded p-3">'.$expired.'</p>';}?>
 
-    <?php if(isset($msg)){echo '<p class="alert-success rounded p-3">'.$msg.'</p>';}?>
+    <?php if(isset($msg)){echo '<div class="logocheck" style="text-align: center; padding-top: 100px">
+                                    <img src="logos/logo_small.png">
+                                </div>
+                                <p class="alert-success rounded p-3">'.$msg.'</p>';}?>
 
     <!-- Reset Form -->
 
     <?php 
     if(!isset($expired) && isset($_GET['code'])){
         echo '
+        <div class="logocheck" style="text-align: center; padding-top: 100px">
+        <img src="logos/logo_small.png">
+        </div>
+        
         <form action="reset_password.php" method="post">
             <h4 style="color: white; text-align: center">Please enter your new password:</h4>
             <input type="password" name="pass1" class="form-control" placeholder="New password..." required>

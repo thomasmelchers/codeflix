@@ -40,10 +40,10 @@ try {
     $mail->isHTML(true);                                  //Set email format to HTML
     $mail->Subject = 'Forgotten Password';
     $mail->Body    = '
-    <p>Dear '.$email.',</p>
+    <h3>Dear '.$email.',</h3>
     
-    <p>Please click on this link to reset your password:</p> 
-    <p>'.$link2.'</p>
+    <h4>Please click on this link to reset your password:</h4> 
+    <h4>'.$link2.'</h4>
 
     Best wishes,
     <br>
