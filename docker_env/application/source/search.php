@@ -1,4 +1,5 @@
-<?php 
+<?php
+session_start();
 include ('server_connection.php');
 include('header.php');
 include('navbar.php');
@@ -33,7 +34,7 @@ include('navbar.php');
 								<h5 class="card-title" style="color: darkgoldenrod;"><?php echo htmlspecialchars($row['titre']); ?></h5>
 								<p class="card-text"><?php echo htmlspecialchars($row['auteur']); ?></p>
 								<form action="comments.php" method="get">
-								<button class="btn btn-danger"><a href="comments.php?vidId= <?= $row['video_id'] ; ?>">Let's learn some <?php echo htmlspecialchars($row['langage']);/*  echo $vidId ; */?></a></button>
+								<button class="btn btn-danger"><a class="buttonCard" href="comments.php?vidId= <?= $row['video_id'] ; ?>">Let's learn some <?php echo htmlspecialchars($row['langage']);/*  echo $vidId ; */?></a></button>
 								</form>
 							</div>
 						</div>

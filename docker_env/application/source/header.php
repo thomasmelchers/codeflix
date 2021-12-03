@@ -34,3 +34,4 @@
     <title><?= $title?? "Codeflix - Accueil" ?></title>
 </head>
 <body>
+<div class="container-fluid">

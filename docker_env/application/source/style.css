@@ -83,6 +83,8 @@ iframe {
   }
 }
 
-
-
+.buttonCard:hover{
+  color: whitesmoke;
+  text-decoration: none;
+}
 
