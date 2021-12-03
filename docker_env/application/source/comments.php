@@ -79,7 +79,7 @@ include('navbar.php')?>
 <div class="container">
 <div class="row justify-content-center" >
     <div class="col-12 col-md-10 col-lg-8 commentStyle mt-5 mb-3">
-        <div class="close"> <a href="./index.php" id="lienIndex">+</a> </div>
+        <div class="close"> <a href="./home.php" id="lienIndex">+</a> </div>
         <h2 id="titreVideo"><?= $video[0]['titre']?></h2>
         <h3 id="titreAuteur"><?= $video[0]['auteur']?></h3>
         
