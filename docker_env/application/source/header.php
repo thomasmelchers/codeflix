@@ -29,6 +29,12 @@
         <!-- footer -->
         <link rel="stylesheet" href="./css/footer.css">
 
+        <!-- profil -->
+        <link rel="stylesheet" href="./css/profil.css">
+
+        <!-- add user -->
+        <link rel="stylesheet" href="./css/addUser.css">
+
        
     
     <title><?= $title?? "Codeflix - Accueil" ?></title>

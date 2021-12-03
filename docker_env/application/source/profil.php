@@ -56,8 +56,7 @@ if ($statement) {
 
 ?>
 
-<link rel="stylesheet" href="./css/profil.css">
-<!-- <link rel="stylesheet" href="./css/add_user.css"> -->
+
 
 <!-- Form html -->
 <div id="containerProfil">

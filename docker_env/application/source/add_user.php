@@ -99,11 +99,6 @@ include "navbar.php";
 ?>
 
 
-
-
-<link rel="stylesheet" href="./css/addUser.css">
-<!-- <link rel="stylesheet" href="./css/add_user.css"> -->
-
 <!-- Form html -->
 
         
