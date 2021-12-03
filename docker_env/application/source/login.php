@@ -110,6 +110,7 @@ include "navbar.php";
                 <div class="elementForm">
                     <label for="password">Password</label>
                     <input type="password" placeholder="bestcoder" name="password" id="password">
+                    <small style="color: white;"><a href="check_email.php">Forgot password?</a></small>
                 </div>
                 <div class="elementFormButton">
                     <button class="btn btn-outline my-2 my-sm-0 mx-2" id="buttonLogin" style="color: red;" type="submit">Connection</button>
