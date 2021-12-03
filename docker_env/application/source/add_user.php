@@ -83,8 +83,8 @@ if (!empty($_POST)) {
                 //"roles" => ["ROLE_USER"]
             ];
 
-            // On peut rediriger vers la page de profil
-            header("Location: index.php");
+            // On peut rediriger vers la page d'accueil du profil
+            header("Location: home.php");
         }
     } else {
         $_SESSION["error"] = ["Le formulaire est incomplet"];

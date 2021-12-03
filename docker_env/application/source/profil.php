@@ -4,9 +4,9 @@ session_start();
 $pseudo = $_SESSION["utilisateur"]["pseudo"];
 $title = "profile of " . $pseudo;
 
-echo "<pre>"."<br>";
+/* echo "<pre>"."<br>";
 var_dump($_SESSION["utilisateur"]);
-echo "</pre>"."<br>";
+echo "</pre>"."<br>"; */
 
 // Inclure le header
 include "header.php";
@@ -32,6 +32,12 @@ if (!empty($_POST)) {
     
     $result =$conn->query($sql);
 
+    $username= $_POST["pseudo"];
+    $email= $_POST["email"];
+    $prenom= $_POST["prenom"];
+    $nom= $_POST["nom"];
+
+    /* header("Refresh:0"); */
 }  
 
 ?>
@@ -47,24 +53,20 @@ if (!empty($_POST)) {
             <form method="post">
                 <div class="elForm">
                     <label for="prenom">Firstname</label>
-                    <input type="text" name="prenom" id="prenom" value="<?= $_SESSION["utilisateur"]["prenom"] ?>" >
+                    <input type="text" name="prenom" id="prenom" value="<?= $prenom ?>" >
                 </div>
                 <div class="elForm">
                     <label for="nom">Lastname</label>
-                    <input type="text" name="nom" id="nom" value="<?= $_SESSION["utilisateur"]["nom"] ?>">
+                    <input type="text" name="nom" id="nom" value="<?= $nom ?>">
                 </div>
                 <div class="elForm">
                     <label for="pseudo">Pseudo</label>
-                    <input type="text" name="pseudo" id="pseudo" value="<?= $_SESSION["utilisateur"]["pseudo"] ?>">
+                    <input type="text" name="pseudo" id="pseudo" value="<?= $username ?>">
                 </div>
                 <div class="elForm">
                     <label for="email">Email</label>
-                    <input type="email" name="email" id="email" value="<?= $_SESSION["utilisateur"]["email"] ?>">
+                    <input type="email" name="email" id="email" value="<?= $email ?>">
                 </div>
-                <!-- <div class="elForm">
-                    <label for="password">Password</label>
-                    <input type="password" name="password" id="password" placeholder="<?= $_SESSION["utilisateur"]["password"] ?>">
-                </div> -->
                 <div id="buttonProfil">
                     <button class="btn btn-outline my-2 my-sm-0 mx-2"  style="color: red;" type="submit" name="submit" id="submit">Update Profil</button>
                 </div>
