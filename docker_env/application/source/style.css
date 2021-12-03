@@ -62,8 +62,13 @@ a {
 }
 
 iframe {
+<<<<<<< HEAD
   border: 0px;
   margin: 0px;
+=======
+  border: 50px;
+  margin: 30px;
+>>>>>>> d363381fca2a9f03a117196bec6a9f0fa4d2dded
 }
 
 .styleCard{
