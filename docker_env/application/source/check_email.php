@@ -45,7 +45,7 @@ if(isset($_POST['reset_link'])){
             $msg = '<h4 class="text-success">Please check your email (including spam) to see the password reset link.</h4>';
     
         } else {
-            $error = "Email does not exist!";
+            $error = '<h5 style="color: red">Email does not exist!</h5>';
         }
     
     }
@@ -68,17 +68,20 @@ if(isset($_POST['reset_link'])){
     
 
 <!-- Log in Form & Reset -->
-    <div class="container">
-        <h4 class="text-center mt-5" style="color: white">Forgot your password? Input your registration email!</h4>
-        <?php if(isset($msg)){echo $msg;}?>
-        <?php if(isset($error)){echo $error;}?>
-
-        <form action="check_email.php" method="post">
-            <input type="text" name="email" placeholder="Your email..." class="form-control">
-            <input type="submit" name="reset_link" value="Send Reset Link" class="btn btn-danger form-control mt-2">
-
-        </form>
+    <div class="logocheck" style="text-align: center; padding-top: 10%">
+        <img src="logos/logo_small.png">
     </div>
+        <div class="container">
+            <h4 class="text-center mt-5" style="color: white">Forgot your password? Input your registration email!</h4>
+            <?php if(isset($msg)){echo $msg;}?>
+            <?php if(isset($error)){echo $error;}?>
+
+            <form action="check_email.php" method="post">
+                <input type="text" name="email" placeholder="Your email..." class="form-control">
+                <input type="submit" name="reset_link" value="Send Reset Link" class="btn btn-danger form-control mt-2">
+
+            </form>
+        </div>
 
 
     <!-- Optional JavaScript -->
