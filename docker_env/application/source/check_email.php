@@ -69,7 +69,7 @@ if(isset($_POST['reset_link'])){
 
 <!-- Log in Form & Reset -->
     <div class="logocheck" style="text-align: center; padding-top: 10%">
-        <img src="logos/logo_small.png">
+        <a href="./index.php"><img src="logos/logo_small.png"></a>
     </div>
         <div class="container">
             <h4 class="text-center mt-5" style="color: white">Forgot your password? Input your registration email!</h4>

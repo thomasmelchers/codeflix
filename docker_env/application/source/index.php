@@ -5,7 +5,9 @@ include('navbar.php');
 
 
 
-<h1 style="color: red; margin-top:20px;"> CodeFlix</h1>
+<div id="logoIndex" style="text-align: center; padding-top: 3% ; padding-bottom : 2% ;">
+        <a href="./index.php"><img src="logos/logo_small.png"></a>
+</div>
   <p style="color: white; text-align: center;">
     Codeflix is a platform entirely dedicated to computer coding. <br> You will find tutorials, documentation, explanations, <br> EVERYTHING that will allow you to improve yourself and your skills.
   </p>
