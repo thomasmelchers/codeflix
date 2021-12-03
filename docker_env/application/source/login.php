@@ -2,13 +2,13 @@
 // On démarre la session PHP
 
 session_start();
-/* 
 
 // Pour empêcher d'aller sur la page connexion si déjà connecté : 
 if (isset($_SESSION["utilisateur"])) {
-    header("Location: profil.php");
+    header("Location: home.php");
     exit;
-} */
+} 
+
 $title = "Connection";
 
 if (!empty($_POST)) {
@@ -64,8 +64,8 @@ if (!empty($_POST)) {
             //"roles" => $user["roles"]
         ];
 
-        // On peut rediriger vers la page de profil
-        header("Location: index.php");
+        // On peut rediriger vers la page d'accueil du profil
+        header("Location: home.php");
     }
     }
     }else {

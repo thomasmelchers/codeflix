@@ -1,143 +1,42 @@
-<?php
-session_start();
-/*  if (!isset($_SESSION["utilisateur"])){
-    header("Location: login.php");
-     exit;
-} */
-
-include('server_connection.php');
+<?php 
 include('header.php');
 include('navbar.php');
 ?>
 
-<h1 style="color: red; margin-top:20px;">HTML</h1>
 
-<div class="container" id="slider1">
-	<div class="slider">
-		<?php
-			$keyword = $_POST['keyword'];
-			$query = $conn->prepare("SELECT * FROM `tutolink` WHERE langage = 'HTML'");
-			$query->execute();
-			while($row = $query->fetch()){
 
-		?>
-		<div class="slider-item">
-			<div class="card styleCard" style="width: 18rem;">
-				<div class="su-youtube su-responsive-media-yes p-1 pt-1"><iframe class="video" width="277px" src=<?php echo htmlspecialchars($row['lien']); ?>></iframe></div>
-  				<div class="card-body text-center">
-					<h5 class="card-title" style="color: darkgoldenrod;"><?php echo htmlspecialchars($row['titre']); ?></h5>
-					<p class="card-text"><?php echo htmlspecialchars($row['auteur']); ?></p>
-					<?php /* $vid = $row['video_id'] . "<br>"; 
-					$_SESSION['video'] = ["vid" => $vid ]; 
-					echo "<pre>" . "<br>";
-					echo var_dump($_SESSION);
-					echo "</pre>" . "<br>"; */  ?>
-					<a href="comments.php" class="btn btn-danger">Let's learn some <?php echo htmlspecialchars($row['langage']); ?></a>
-  				</div>
-			</div>
-		</div>
-		<?php } ?>
-	</div>
-	<div class="slider-btn">
-		<a href="javascript::" class="arrow arrow-left" style="color: darkred;">‹</a>
-		<a href="javascript::" class="arrow arrow-right" style="color: darkred;">›</a>
-	</div>
-</div>
-	
-<h1 style="color: red; margin-top:20px;">CSS</h1>
+<h1 style="color: red; margin-top:20px;"> CodeFlix</h1>
+  <p style="color: white; text-align: center;">
+    Codeflix is a platform entirely dedicated to computer coding. <br> You will find tutorials, documentation, explanations, <br> EVERYTHING that will allow you to improve yourself and your skills.
+  </p>
+  <br>
+	<h1 style="color: red;">Features : </h1>
 <div class="container" id="slider2">
-	<div class="slider">
-	<?php
-		$query = $conn->prepare("SELECT * FROM `tutolink` WHERE langage = 'CSS'");
-		$query->execute();
-		while($row = $query->fetch()){
-	?>
-		<div class="slider-item">
-			<div class="card styleCard" style="width: 18rem;">
-			<div class="su-youtube su-responsive-media-yes p-1 pt-1"><iframe class="video" width="277px" src=<?php echo htmlspecialchars($row['lien']); ?>></iframe></div>
-  				<div class="card-body text-center">
-					<h5 class="card-title" style="color: darkgoldenrod;"><?php echo htmlspecialchars($row['titre']); ?></h5>
-					<p class="card-text"><?php echo htmlspecialchars($row['auteur']); ?></p>
-					<?php /* $vid = $row['video_id'] . "<br>"; 
-					$_SESSION['video'] = ["vid" => $vid ]; 
-					echo "<pre>" . "<br>";
-					echo var_dump($_SESSION);
-					echo "</pre>" . "<br>"; */  ?>
-					<a href="comments.php" class="btn btn-danger">Let's learn some <?php echo htmlspecialchars($row['langage']); ?></a>
-  				</div>
-			</div>
-		</div>
-	<?php } ?>
-	</div>
-	<div class="slider-btn">
-		<a href="javascript::" class="arrow arrow-left" style="color: darkred;">‹</a>
-		<a href="javascript::" class="arrow arrow-right" style="color: darkred;">›</a>
-	</div>
-</div>
-	
-<h1 style="color: red; margin-top:20px;">JavaScript</h1>
-<div class="container" id="slider3">
-	<div class="slider">
-		<?php
-			$query = $conn->prepare("SELECT * FROM `tutolink` WHERE langage = 'JavaScript'");
-			$query->execute();
-			while($row = $query->fetch()){
-		?>
-		<div class="slider-item">
-			<div class="card styleCard" style="width: 18rem;">
-			<div class="su-youtube su-responsive-media-yes p-1 pt-1"><iframe class="video" width="277px" src=<?php echo htmlspecialchars($row['lien']); ?>></iframe></div>
-  				<div class="card-body text-center">
-					<h5 class="card-title" style="color: darkgoldenrod;"><?php echo htmlspecialchars($row['titre']); ?></h5>
-					<p class="card-text"><?php echo htmlspecialchars($row['auteur']); ?></p>
-					<?php /* $vid = $row['video_id'] . "<br>"; 
-					$_SESSION['video'] = ["vid" => $vid ]; 
-					echo "<pre>" . "<br>";
-					echo var_dump($_SESSION);
-					echo "</pre>" . "<br>"; */  ?>
-					<a href="comments.php" class="btn btn-danger">Let's learn some <?php echo htmlspecialchars($row['langage']); ?></a>
-  				</div>
-			</div>
+			<div class="slider">
+			<?php
+        include ('server_connection.php');
+				$query = $conn->prepare("SELECT * FROM `tutolink`");
+				$query->execute();
+				while($row = $query->fetch()){
+			?>
+			<div class="slider-item">
+			<iframe width="300px" src=<?php echo htmlspecialchars($row['lien']); ?>></iframe>
 		</div>
 		<?php } ?>
-	</div>
-	<div class="slider-btn">
-		<a href="javascript::" class="arrow arrow-left" style="color: darkred;">‹</a>
-		<a href="javascript::" class="arrow arrow-right" style="color: darkred;">›</a>
-	</div>
-</div>
-	
-<h1 style="color: red; margin-top:20px;">PHP</h1>
-<div class="container" id="slider4">
-	<div class="slider">
-		<?php
-			$query = $conn->prepare("SELECT * FROM `tutolink` WHERE langage = 'PHP'");
-			$query->execute();
-			while($row = $query->fetch()){
-		?>
-		<div class="slider-item">
-			<div class="card styleCard" style="width: 18rem;">
-			<div class="su-youtube su-responsive-media-yes p-1 pt-1"><iframe class="video" width="277px" src=<?php echo htmlspecialchars($row['lien']); ?>></iframe></div>
-  				<div class="card-body text-center">
-					<h5 class="card-title" style="color: darkgoldenrod;"><?php echo htmlspecialchars($row['titre']); ?></h5>
-					<p class="card-text"><?php echo htmlspecialchars($row['auteur']); ?></p>
-					<?php /* $vid = $row['video_id'] . "<br>"; 
-					$_SESSION['video'] = ["vid" => $vid ]; 
-					echo "<pre>" . "<br>";
-					echo var_dump($_SESSION);
-					echo "</pre>" . "<br>"; */  ?>
-					<a href="comments.php" class="btn btn-danger">Let's learn some <?php echo htmlspecialchars($row['langage']); ?></a>
-  				</div>
 			</div>
-		</div>
-		<?php } ?>
-	</div>
 	<div class="slider-btn">
-		<a href="javascript::" class="arrow arrow-left" style="color: darkred;">‹</a>
-		<a href="javascript::" class="arrow arrow-right" style="color: darkred;">›</a>
+				<a href="javascript::" class="arrow arrow-left">‹</a>
+				<a href="javascript::" class="arrow arrow-right">›</a>
+		</div>
 	</div>
-</div>
+	<h1 style="color: red; margin-top:20px;"> About CodeFlix :  </h1>
+  <p style="color: white; text-align: center;">
+  We offer a completely free platform. <br> Of course, in the future, there will be a premium version <br> that will offer you much more content with some exercises after each tutorial. <br> Be patient, it will happen very soon!  </p>
+  <br>
 
 <?php 
 // Inclure le footer
-include('footer.php');
+include "footer.php";
 ?>
+
+
