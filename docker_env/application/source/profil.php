@@ -20,25 +20,39 @@ include "navbar.php";
 // Connxion à la DB
 require_once "server_connection.php";
 
-if (!empty($_POST)) {
-    $user_id=$_SESSION["utilisateur"]["id"];
-    $username= $_POST["pseudo"];
-    $email= $_POST["email"];
-    $prenom= $_POST["prenom"];
-    $nom= $_POST["nom"];
-    
+$user_id = $_SESSION["utilisateur"]["id"];
 
-    $sql="UPDATE `utilisateurs` SET `pseudo`='$username', `email`='$email', `nom`='$nom', `prenom`='$prenom' WHERE `user_id`= '$user_id'";
-    
-    $result =$conn->query($sql);
+// Récupérer les données utilisateur depuis la DB pour les afficher dans le form
+$sql = "SELECT * FROM `utilisateurs` WHERE `user_id`= $user_id";
+$statement = $conn->query($sql);
 
-    $username= $_POST["pseudo"];
-    $email= $_POST["email"];
-    $prenom= $_POST["prenom"];
-    $nom= $_POST["nom"];
+if ($statement) {
+    $userData = $statement->fetchAll(PDO::FETCH_ASSOC);
+    $prenom = $userData[0]["prenom"];
+    $nom = $userData[0]["nom"];
+    $username = $userData[0]["pseudo"];
+    $email = $userData[0]["email"];
 
-    /* header("Refresh:0"); */
-}  
+
+    if (!empty($_POST)) {
+        $newUsername = $_POST["pseudo"];
+        $newEmail = $_POST["email"];
+        $newPrenom = $_POST["prenom"];
+        $newNom = $_POST["nom"];
+
+        //Requête sql pour update DB
+        $sql2 = "UPDATE `utilisateurs` SET `pseudo`='$newUsername', `email`='$newEmail', `nom`='$newNom', `prenom`='$newPrenom' WHERE `user_id`= '$user_id'";
+
+        $result = $conn->query($sql2);
+
+
+        /* header("Location: /profil.php"); */
+    }
+}
+
+
+
+
 
 ?>
 
@@ -47,13 +61,13 @@ if (!empty($_POST)) {
 
 <!-- Form html -->
 <div id="containerProfil">
-    <div id="styleProfil">   
-        <h1 id="titreProfil">Profile of <?= $_SESSION["utilisateur"]["pseudo"] ?></h1>     
+    <div id="styleProfil">
+        <h1 id="titreProfil">Profile of <?= $pseudo ?></h1>
         <div id="formulaireProfil">
             <form method="post">
                 <div class="elForm">
                     <label for="prenom">Firstname</label>
-                    <input type="text" name="prenom" id="prenom" value="<?= $prenom ?>" >
+                    <input type="text" name="prenom" id="prenom" value="<?= $prenom ?>">
                 </div>
                 <div class="elForm">
                     <label for="nom">Lastname</label>
@@ -68,7 +82,7 @@ if (!empty($_POST)) {
                     <input type="email" name="email" id="email" value="<?= $email ?>">
                 </div>
                 <div id="buttonProfil">
-                    <button class="btn btn-outline my-2 my-sm-0 mx-2"  style="color: red;" type="submit" name="submit" id="submit">Update Profil</button>
+                    <button class="btn btn-outline my-2 my-sm-0 mx-2" style="color: red;" type="submit" name="submit" id="submit">Update Profil</button>
                 </div>
             </form>
         </div>
