@@ -5,7 +5,7 @@ html {
 body {
   margin: 0;
   background-color: #000;
-  min-width: 1200px;
+  /* min-width: 1200px; */
 }
 
 h1 {
@@ -68,6 +68,18 @@ iframe {
 
 .styleCard{
   background-color: #343A40;
+}
+
+@media screen and (max-width: 1000px) {
+  .slider-item {
+    position: absolute;
+    width: 25px;
+    height: 50px;
+  }
+  .container {
+    position: relative;
+    width: 600px;
+  }
 }
 
 
