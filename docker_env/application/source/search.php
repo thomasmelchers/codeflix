@@ -8,6 +8,7 @@ include('navbar.php');
 
 <?php
     if($_GET['keyword']){ ?>
+<<<<<<< HEAD
 				<?php
 
 					$keyword = $_GET['keyword'];
@@ -49,3 +50,27 @@ include('navbar.php');
     include('footer.php'); 
 ?>
 
+=======
+        <table class="table table-bordered">
+            <?php
+                $keyword = $_GET['keyword'];
+                $query = $conn->prepare("SELECT * FROM tutolink WHERE auteur = '$keyword' OR langage = '$keyword' OR titre = '$keyword'");
+                $query->execute();
+                ?>
+                <h1><?= $keyword ?></h1>
+                <?php
+                while($row = $query->fetch()){
+            ?>    
+                <tr>
+                    <iframe width="300px"  src=<?php echo htmlspecialchars ($row['lien']); ?>> </iframe>
+                </tr>
+        <?php
+            }
+        ?>
+<?php        
+    }
+?>
+<?php 
+    include('footer.php'); 
+?>
+>>>>>>> d363381fca2a9f03a117196bec6a9f0fa4d2dded

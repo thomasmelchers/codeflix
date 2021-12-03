@@ -62,14 +62,25 @@ a {
 }
 
 iframe {
+<<<<<<< HEAD
   border: 0px;
   margin: 0px;
+=======
+<<<<<<< HEAD
+  border: 0px;
+  margin: 0px;
+=======
+  border: 50px;
+  margin: 30px;
+>>>>>>> d363381fca2a9f03a117196bec6a9f0fa4d2dded
+>>>>>>> 4b99d7f03f7b7fd5a3ca60b61478cd6af105f536
 }
 
 .styleCard{
   background-color: #343A40;
 }
 
+<<<<<<< HEAD
 @media screen and (max-width: 1000px) {
   .slider-item {
     position: absolute;
@@ -85,3 +96,8 @@ iframe {
 
 
 
+=======
+
+
+
+>>>>>>> 4b99d7f03f7b7fd5a3ca60b61478cd6af105f536
