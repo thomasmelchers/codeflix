@@ -1,4 +1,5 @@
 <?php
+ob_start(); // résoudre les problèmes de referesh
 // session start au tout début
 session_start();
 $pseudo = $_SESSION["utilisateur"]["pseudo"];
@@ -46,7 +47,7 @@ if ($statement) {
         $result = $conn->query($sql2);
 
 
-        /* header("Location: /profil.php"); */
+        header("Location: /profil.php");
     }
 }
 
