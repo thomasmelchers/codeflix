@@ -1,7 +1,9 @@
 <?php 
+session_start();
 include ('server_connection.php');
 include('header.php');
 include('navbar.php');
+
 ?>
 
 

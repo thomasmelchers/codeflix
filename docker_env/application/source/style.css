@@ -32,7 +32,7 @@ a {
 .slider {
   position: relative;
   width: 100%;
-  height: 350px;
+  height: 450px;
   transition: .7s ease-in-out;
   transform: translateX(0);
 }
@@ -41,7 +41,7 @@ a {
   height: 150px;
 }
 .slider-btn {
-  top: -260px;
+  top: -370px;
   position: relative;
 }
 .slider-btn a {
@@ -62,20 +62,14 @@ a {
 }
 
 iframe {
-  border: 50px;
-  margin: 30px;
+  border: 0px;
+  margin: 0px;
 }
 
 .styleCard{
   background-color: #343A40;
-  text-align: center;
 }
 
-.su-youtube {
-  margin: 0 auto;
-  display: block;
-}
 
-#displayResearch{
-  border: 1px solid yellow;
-}
+
+
