@@ -67,7 +67,7 @@ if(isset($_POST['reset'])){
     <?php if(isset($error)){echo '<p class="alert-danger rounded p-3">'.$error.'</p>';}?>
     <?php if(isset($expired)){echo '<p class="alert-danger rounded p-3">'.$expired.'</p>';}?>
 
-    <?php if(isset($msg)){echo '<div class="logocheck" style="text-align: center; padding-top: 100px">
+    <?php if(isset($msg)){echo '<div class="logocheck" style="text-align: center; padding-top: 200px">
                                     <img src="logos/logo_small.png">
                                 </div>
                                 <p class="alert-success rounded p-3">'.$msg.'</p>';}?>
@@ -77,7 +77,7 @@ if(isset($_POST['reset'])){
     <?php 
     if(!isset($expired) && isset($_GET['code'])){
         echo '
-        <div class="logocheck" style="text-align: center; padding-top: 100px">
+        <div class="logocheck" style="text-align: center; padding-top: 200px">
         <img src="logos/logo_small.png">
         </div>
         

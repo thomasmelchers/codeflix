@@ -68,7 +68,7 @@ if(isset($_POST['reset_link'])){
     
 
 <!-- Log in Form & Reset -->
-    <div class="logocheck" style="text-align: center; padding-top: 100px">
+    <div class="logocheck" style="text-align: center; padding-top: 200px">
         <img src="logos/logo_small.png">
     </div>
         <div class="container">
