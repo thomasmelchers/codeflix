@@ -87,3 +87,8 @@ iframe {
   color: whitesmoke;
   text-decoration: none;
 }
+
+nav a:hover{
+  text-decoration: none;
+  color: whitesmoke;
+}
