@@ -2,7 +2,7 @@
 
 [codeflix]()
 
-[alt text](./docker_env/application/source/images/overview.png)
+![alt text](./docker_env/application/source/images/overview.png)
 
 Codeflix is a project which has been created by a team of four students from BeCode. The goal was to develop a GetFlix website inspired of streaming plateforms like Netflix, Disney ++, Amazon Prime, ... Here are the [instructions](https://github.com/becodeorg/BXL-Swartz-5.34/blob/main/2.The-Hill/1.PHP/GetflixProject.md) we had to follow for this project. 
 
@@ -39,7 +39,7 @@ On this page you have access to some filters options, a search bar, the user pro
 #### Profil page:
 This page displays all the informations about the user. There he/she can update the informations which are sended and update into the database.
 
-[alt text](./docker_env/application/source/images/profil-overview.png)
+![alt text](./docker_env/application/source/images/profil-overview.png)
 
 #### Search/result page:
 After having selecting a filter or tipping some keywords into the search bar, the user lands on this page where the results are shown. All the youtube recording are displayed into cards with a button under. 
@@ -47,7 +47,7 @@ After having selecting a filter or tipping some keywords into the search bar, th
 #### Content pages:
 After clicking on the link below the youtube recording on the home page, the user arrives on a page where more informations on the tutorial are shown. Under the recording the user has the option to leave a comment which will be displayed echronological into a second accordion.
 
-[alt text](./docker_env/application/source/images/overview-content.png)
+![alt text](./docker_env/application/source/images/overview-content.png)
 
 ### The database: 
 
