@@ -47,7 +47,7 @@ After having selecting a filter or tipping some keywords into the search bar, th
 #### Content pages:
 After clicking on the link below the youtube recording on the home page, the user arrives on a page where more informations on the tutorial are shown. Under the recording the user has the option to leave a comment which will be displayed echronological into a second accordion.
 
-![alt text](./docker_env/application/source/images/overview-content.png)
+![alt text](./docker_env/application/source/images/content-overview.png)
 
 ### The database: 
 
