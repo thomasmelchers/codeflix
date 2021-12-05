@@ -1,6 +1,6 @@
 # CodeFlix:
 
-[codeflix]()
+[codeflix](https://codeflix-becode.000webhostapp.com/)
 
 ![alt text](./docker_env/application/source/images/overview.png)
 
@@ -53,7 +53,7 @@ After clicking on the link below the youtube recording on the home page, the use
 
 The database is established with 4 tables: 
 
-
+![alt text](./docker_env/application/source/images/codeflix.png)
 
 ### Programming languages & framework used: 
 
