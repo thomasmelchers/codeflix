@@ -1,6 +1,6 @@
 # CodeFlix:
 
-[codeflix](https://codeflix-becode.000webhostapp.com/)
+[codeflix](http://www.codefilx.kamilbiczyk.be/)
 
 ![alt text](./docker_env/application/source/images/overview.png)
 
